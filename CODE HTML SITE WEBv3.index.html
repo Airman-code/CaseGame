@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Game SAS - Plus que des jeux, c’est du sport</title>
+    <style>
+        /* Styles de base */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, rgba(176, 178, 131, 0.85), rgba(255, 255, 255, 0.8)), url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header & Footer */
+        header, footer {
+            background-color: rgba(51, 51, 51, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em; /* Utilisation d'unités relatives pour la taille de police */
+            color: #FFD700; /* Couleur dorée pour le titre */
+        }
+
+        header p {
+            font-size: 1.2em; /* Taille légèrement plus grande pour le sous-titre */
+            color: #FFFAFA; /* Couleur légèrement différente pour le sous-titre */
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #FFD700; /* Couleur gris clair pour le texte du footer */
+        }
+
+        main {
+            padding: 120px 10px 80px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Sommaire */
+        #sommaire {
+            padding: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            background: rgba(176, 178, 131, 0.9);
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #sommaire ul {
+            list-style: none; /* Utilisation de 'none' pour le style de liste */
+            padding: 0;
+        }
+
+        #sommaire li {
+            margin: 5px 0;
+        }
+
+        #sommaire li a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        #sommaire li a:hover {
+            color: #b0b283;
+        }
+
+        /* Typographie des sections */
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: #333;
+            text-decoration: underline;
+            padding-top: 5px;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        /* Images */
+        .section-img {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .section-img img {
+            max-width: 50%; /* Responsive images */
+            height: auto; /* Maintenir le rapport d'aspect */
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Listes */
+        ul.activities {
+            padding: 0;
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .activities li {
+            font-size: 0.9em; /* Taille de police plus petite pour les listes */
+        }
+
+        /* Conteneur de sections */
+        section {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+	.header-img {
+    	   text-align: center; /* Centrer l'image */
+    	   margin-top: 10px; /* Espacement au-dessus de l'image */
+        }
+
+	.header-img img {
+    	  max-width: 100px; /* Largeur maximale pour la miniature */
+          height: auto; /* Hauteur automatique pour maintenir le ratio */
+    	  opacity: 0.8; /* Légère transparence */
+    	  border-radius: 8px; /* Coins arrondis */
+    	  transition: opacity 0.3s; /* Transition de l'opacité */
+        }
+
+	.header-img img:hover {
+    	  opacity: 1; /* Opacité complète au survol */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Case Game</h1>
+    <p>Plus que des jeux, c’est du sport</p>
+    <div class="header-img">
+        <img src="logocasegame.png" alt="Miniature Transparente" onerror="this.style.display='none'">
+    </div>
+</header>
+
+
+<main>
+    <!-- Sommaire -->
+    <section id="sommaire">
+        <h2>Sommaire</h2>
+        <ul>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#activites">Nos Activités</a></li>
+            <li><a href="#valeurs">Nos Valeurs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos">
+        <h2>À propos</h2>
+        <div class="section-img">
+            <img src="logocasegame.png" alt="Logo Case Game" onerror="this.style.display='none'">
+        </div>
+        <p>Case Game, une entreprise dynamique basée à Douala, développe le divertissement au Cameroun dans un objectif unique : améliorer l’individu et la société à travers le jeu. Nous croyons que le plaisir de jouer peut être un vecteur de valeurs humaines essentielles, un moyen d'encourager le développement personnel et collectif.</p>
+    </section>
+
+    <!-- Activités -->
+    <section id="activites">
+        <h2>Nos Activités</h2>
+        <h3>Tournois de jeux mobiles</h3>
+        <div class="section-img">
+            <img src="tournoi_jeux_mobile.jpg" alt="Jeune africain se développant par le jeu" onerror="this.style.display='none'">
+        </div>
+        <p>Case Game organise des tournois de jeux mobiles pour stimuler les compétences des joueurs et promouvoir l'e-sport au Cameroun. À chaque tournoi, des récompenses motivent les joueurs à exceller.</p>
+        <ul class="activities">
+            <li>Jeudi : League of Legends Wild Rift</li>
+            <li>Vendredi : Brawl Stars / Clash Royale</li>
+            <li>Samedi : Call of Duty</li>
+            <li>Dimanche : FC Mobile</li>
+        </ul>
+
+        <h3>Développement des réseaux sociaux</h3>
+        <div class="section-img">
+            <img src="reseaux_sociaux.jpg" alt="Réseaux sociaux" onerror="this.style.display='none'">
+        </div>
+        <p>Nous proposons des solutions pour développer votre présence en ligne. En augmentant votre visibilité, vous pourrez générer des revenus et attirer des partenariats stratégiques.</p>
+
+        <h3>Salle de jeux vidéo</h3>
+        <div class="section-img">
+            <img src="image_groupe.jpg" alt="Salle de jeux vidéo" onerror="this.style.display='none'">
+        </div>
+        <p>Notre salle de jeux est conçue pour offrir une expérience de qualité à prix abordable, garantissant la sécurité et le confort de tous. Explorez nos espaces diversifiés pour des expériences uniques !</p>
+
+        <h3>Watersoft : le jeu de tir stratégique</h3>
+        <div class="section-img">
+            <img src="watersoft.webp" alt="Jeu de tir stratégique Watersoft" onerror="this.style.display='none'">
+        </div>
+        <p>Case Game propose Watersoft, une arène de tir stratégique intérieure et extérieure, idéale pour les évènements de groupe et les aventures intenses, sous l'encadrement de notre équipe dédiée.</p>
+
+        <h3>Maisons Gonflables</h3>
+        <div class="section-img">
+            <img src="maison_gonflable.jpg" alt="Maisons gonflables" onerror="this.style.display='none'">
+        </div>
+        <p>Nos maisons gonflables sont parfaites pour tous types d'événements et conviennent à des publics de tous âges. Une animation de choix pour des moments de divertissement en famille ou entre amis.</p>
+    </section>
+
+    <!-- Valeurs -->
+    <section id="valeurs">
+        <h2>Nos Valeurs</h2>
+        <div class="section-img">
+            <img src="image_jeune_africain.webp" alt="Maisons gonflables" onerror="this.style.display='none'">
+        </div>
+        <p>Nous croyons en l'innovation, l'engagement, la qualité et le respect. Chez Case Game, nous utilisons le divertissement pour promouvoir l'inclusion, l'apprentissage et la solidarité. En valorisant ces principes, nous espérons inspirer nos communautés à travers le jeu.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Pour toute demande, n'hésitez pas à nous contacter à l'adresse suivante :</p>
+        <p><strong>Email :</strong> contact.casegame@gmail.com</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Case Game SAS. Tous droits réservés.</p>
+    <p>Siège social : Douala, Cameroun - RCCM : CM-DLA-01-2024-B12-00762</p>
+</footer>
+
+</body>
+</html>
