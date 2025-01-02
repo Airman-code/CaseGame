@@ -1,5 +1,5 @@
 # Case Game
-CaseGame/[logocasegame.png]
+
 Bienvenue sur le site web de **Case Game**, une entreprise dynamique basée à Douala, Cameroun.  
 Nous croyons que le plaisir de jouer peut être un vecteur de valeurs humaines essentielles, un moyen d'encourager le développement personnel et collectif.
 
