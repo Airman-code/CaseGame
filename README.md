@@ -17,10 +17,10 @@ Accédez à notre vitrine en ligne : [https://urls.fr/HlktRO](https://urls.fr/Hl
 
 Nous organisons des tournois de jeux mobiles pour stimuler les compétences des joueurs et promouvoir l'e-sport au Cameroun.
 
-- **Jeudi** : League of Legends Wild Rift  
-- **Vendredi** : Brawl Stars / Clash Royale  
-- **Samedi** : Call of Duty  
-- **Dimanche** : FC Mobile  
+- League of Legends Wild Rift  
+- Brawl Stars / Clash Royale  
+- Call of Duty  
+- FC Mobile  
 
 ### 2. **Développement des réseaux sociaux**
 
