@@ -1,255 +1,419 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Game SAS - Plus que des jeux, c’est du sport</title>
-    <style>
-        /* Styles de base */
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom right, rgba(176, 178, 131, 0.85), rgba(255, 255, 255, 0.8)), url('background.jpg') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 
-        /* Header & Footer */
-        header, footer {
-            background-color: rgba(51, 51, 51, 0.9);
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
+     
 
-        header h1 {
-            margin: 0;
-            font-size: 2em; /* Utilisation d'unités relatives pour la taille de police */
-            color: #FFD700; /* Couleur dorée pour le titre */
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-        header p {
-            font-size: 1.2em; /* Taille légèrement plus grande pour le sous-titre */
-            color: #FFFAFA; /* Couleur légèrement différente pour le sous-titre */
-        }
+    <title>Case Game - Divertissement à Douala</title> 
 
-        footer p {
-            margin: 5px 0;
-            color: #FFD700; /* Couleur gris clair pour le texte du footer */
-        }
+    <style> /* Reset box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        main {
-            padding: 120px 10px 80px;
-            width: 100%;
-            max-width: 1200px;
-        }
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
 
-        /* Sommaire */
-        #sommaire {
-            padding: 15px;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
-            background: rgba(176, 178, 131, 0.9);
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+/* Header */
+.header {
+    padding: 30px;
+    text-align: center;
+    background-color: gold;
+}
 
-        #sommaire ul {
-            list-style: none; /* Utilisation de 'none' pour le style de liste */
-            padding: 0;
-        }
+.header h1 {
+    font-size: 50px;
+}
 
-        #sommaire li {
-            margin: 5px 0;
-        }
+/* Navigation */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
 
-        #sommaire li a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
+.topnav a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        #sommaire li a:hover {
-            color: #b0b283;
-        }
+.topnav a:hover {
+    background-color: gold;
+    color: black;
+}
 
-        /* Typographie des sections */
-        h2 {
-            font-size: 2em;
-            font-weight: bold;
-            color: #333;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.7);
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
+/* Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        h3 {
-            font-size: 1.5em;
-            color: #333;
-            text-decoration: underline;
-            padding-top: 5px;
-        }
+.leftcolumn, .rightcolumn {
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
 
-        p {
-            font-size: 1em;
-            line-height: 1.6;
-            color: #444;
-        }
+.leftcolumn {
+    flex: 63%;
+}
 
-        /* Images */
-        .section-img {
-            text-align: center;
-            margin: 10px 0;
-        }
+.rightcolumn {
+    flex: 37%;
+    background-color: black;
+}
 
-        .section-img img {
-            max-width: 50%; /* Responsive images */
-            height: auto; /* Maintenir le rapport d'aspect */
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-        }
+/* Image and Cards */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
 
-        /* Listes */
-        ul.activities {
-            padding: 0;
-            list-style: disc;
-            margin-left: 20px;
-        }
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
 
-        .activities li {
-            font-size: 0.9em; /* Taille de police plus petite pour les listes */
-        }
+.card {
+    background-color: #333;
+    padding: 20px;
+    margin-top: 20px;
+}
 
-        /* Conteneur de sections */
-        section {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    margin-top: 20px;
+}
 
-	.header-img {
-    	   text-align: center; /* Centrer l'image */
-    	   margin-top: 10px; /* Espacement au-dessus de l'image */
-        }
+/* Media Queries */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
 
-	.header-img img {
-    	  max-width: 100px; /* Largeur maximale pour la miniature */
-          height: auto; /* Hauteur automatique pour maintenir le ratio */
-    	  opacity: 0.8; /* Légère transparence */
-    	  border-radius: 8px; /* Coins arrondis */
-    	  transition: opacity 0.3s; /* Transition de l'opacité */
-        }
+@media screen and (max-width: 400px) {
+    .topnav a {
+        width: 100%;
+    }
+}
 
-	.header-img img:hover {
-    	  opacity: 1; /* Opacité complète au survol */
-        }
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-    </style>
-</head>
-<body>
+.mySlides {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
 
-<header>
-    <h1>Case Game</h1>
-    <p>Plus que des jeux, c’est du sport</p>
-    <div class="header-img">
-        <img src="logocasegame.png" alt="Miniature Transparente" onerror="this.style.display='none'">
+.mySlides img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fade {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+    </style> 
+
+</head> 
+
+<body> 
+
+ 
+
+<div class="header"> 
+
+    <h1>Case Game</h1> 
+
+    <p>Divertissement à Douala</p> 
+
+</div> 
+
+ 
+
+<div class="topnav"> 
+
+    <a href="#accueil">Accueil</a> 
+
+    <a href="#apropos">À propos</a> 
+
+    <a href="#services">Services</a> 
+
+    <a href="#gamespoints">Games Points</a> 
+
+    <a href="#tarifs">Tarifs</a> 
+
+    <a href="#recompenses">Récompenses</a> 
+
+    <a href="#galerie">Galerie</a> 
+
+    <a href=#contact" style="float:right">Contact</a> 
+
+</div> 
+
+ 
+
+<div class="row"> 
+
+    <div class="leftcolumn"> 
+
+        <div class="card" id="accueil"> 
+
+            <h2>Plus que des jeux, c’est du sport.</h2> 
+
+            <p>Case Game vous accueille pour une expérience inédite de divertissement.</p> 
+
+        </div> 
+
+        <div class="card" id="services"> 
+
+            <h2>Nos Services</h2> 
+
+            <h3>Watersoft</h3> 
+
+            <p>Le Watersoft est un jeu de tirs stratégique utilisant des pistolets à orbeez. Sans douleur ni impact durable, il favorise la précision, la rapidité et l'esprit d'équipe.</p> 
+
+              <video width="100%" controls=""> 
+
+        <source src="Watersoft_video.mp4" type="video/mp4">
+
+        Votre navigateur ne prend pas en charge la vidéo. 
+
+    </video> 
+
+             
+
+            <h3>Jeux mobiles</h3> 
+
+            <p>Affrontez d'autres joueurs et montrez votre talent !</p> 
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+            <img src="Jeux_mobile.jpg" width="460" height="345" alt="Jeux mobiles">
+            <h3>Salle de jeux vidéo</h3> 
+
+            <p>Découvrez nos consoles modernes et vintage.</p> 
+            <img src="Sallejeuxvideo.jpg" width="460" height="345" alt="Salle de jeux video">
+            <h3>Événements et compétitions</h3> 
+            <img src="events_img.jpg" width="460" height="345" alt="Evenements">
+            <p>Case Game organise régulièrement des événements et tournois avec des prix variés.</p> 
+
+        </div> 
+
+        <div class="card" id="gamespoints"> 
+
+            <h2>Games Points</h2> 
+            <img src="./Site web final_files/GPimages_img.jpg" width="460" height="345" alt="Games points">
+            <p>Notre monnaie interne pour accéder aux jeux et remporter des récompenses.</p> 
+
+            <h3>Les Games point s’achètent :</h3> 
+
+            <p>100 Games Points = 500 FCFA</p> 
+
+            <p>300 Games Points = 1000 FCFA</p> 
+
+            <p>1000 Games Points = 3000 FCFA</p> 
+
+            <h3>Les Games points se gagnent :</h3> 
+
+            <p>- Défi et challenges simples : 100 Games points à gagner</p> 
+
+            <p>- Petit concours et tournois : 300 Games points à gagner</p> 
+
+            <p>- Grand concours et tournois : 800 Games points à gagner</p> 
+
+        </div> 
+
+        <div class="card" id="tarifs"> 
+
+            <h2>Tarifs</h2> 
+
+            <p>Consultez les tarifs de nos différentes activités et événements.</p> 
+
+            <p>Utilisation simple des activités : 100 Games points</p> 
+
+            <p>Petit concours et tournois : 100 Games points par inscription</p> 
+
+            <p>Grand concours et tournois : 300 Games points par inscription</p> 
+
+            <p>Défi et challenges simples : Gratuit via inscription</p> 
+
+        </div> 
+        <div class="card" id="recompenses"> 
+
+            <h2>Récompenses</h2> 
+
+            <ul>
+                <li>Tickets d’échange pour des produits et services</li>
+                <li>Accès gratuit à certaines activités</li>
+                <li>Bons d’achat</li>
+                <li>Réductions sur les futurs tournois</li>
+                <li>Produits dérivés de Case Game</li>
+            </ul>
+            <img src="./Site web final_files/recp_image.jpg" width="600" height="415" alt="Récompenses">
+        </div>
+	<div class="card" id="contact"> 
+
+            <h2>Contact</h2>
+	<p>📷 Instagram :  
+    	<a href="https://www.instagram.com/casegame.cm?igsh=MXM1bHhlMDB2M2U5NQ==" target="_blank" rel="noopener noreferrer">
+        	@casegame.cm
+    	</a>
+	</p>
+
+	<p>📘 Facebook :  
+    	<a href="https://www.facebook.com/share/1F2xtSxAty/" target="_blank" rel="noopener noreferrer">
+        	Voir la page
+    	</a>
+	</p>
+
+	<p>🎵 TikTok :  
+    	<a href="https://www.tiktok.com/@casegame.cm?_t=ZN-8uvqlHzDH7O&amp;_r=1" target="_blank" rel="noopener noreferrer">
+        	@casegame.cm
+    	</a>
+	</p>
+
+	<p>📱 WhatsApp :  
+    	<a href="https://wa.me/237693465285" target="_blank" rel="noopener noreferrer">
+        	+237 693 46 52 85
+    	</a>
+	</p>
+	<p> Localisation :</p>
+		<iframe src="./Site web final_files/embed.html" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>  
+    </div> 
+
+    <div class="rightcolumn"> 
+
+        <div class="card" id="apropos"> 
+
+            <h2>À propos de nous</h2> 
+
+            <img src="./Site web final_files/logo_casegame.png" width="300" height="345" alt="Logo"> 
+
+            <p>Case Game est une entreprise de divertissement qui permet aux joueurs de remporter des lots grâce à des défis, compétitions et tournois. Plus qu’un simple centre de loisirs, nous nous positionnons comme un acteur du développement et un créateur d’opportunités pour la population camerounaise.</p> 
+
+        </div> 
+
+        <div class="card" id=id="galerie"> 
+
+            <h2>Galerie</h2> 
+
+            <p>Photos et vidéos de nos événements et activités.</p> 
+        <div class="slideshow-container">
+
+        <div class="mySlides fade" style="display: block;">
+            <img src="./Site web final_files/Carroussel_1.jpg" style="width:30%">
+        </div>
+
+        <div class="mySlides fade" style="display: none;">
+            <img src="./Site web final_files/Carroussel_2.jpg" style="width:30%">
+        </div>
+
+        <div class="mySlides fade" style="display: none;">
+            <img src="./Site web final_files/Carroussel_3.jpg" style="width:30%">
+        </div>
+
+        <div class="mySlides fade" style="display: none;">
+            <img src="./Site web final_files/Carroussel_4.jpg" style="width:30%">
+        </div>
+
+        <!-- Boutons de navigation -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
-</header>
+        </div> 
 
+         
 
-<main>
-    <!-- Sommaire -->
-    <section id="sommaire">
-        <h2>Sommaire</h2>
-        <ul>
-            <li><a href="#apropos">À propos</a></li>
-            <li><a href="#activites">Nos Activités</a></li>
-            <li><a href="#valeurs">Nos Valeurs</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </section>
+    </div> 
 
-    <!-- À propos -->
-    <section id="apropos">
-        <h2>À propos</h2>
-        <div class="section-img">
-            <img src="logocasegame.png" alt="Logo Case Game" onerror="this.style.display='none'">
-        </div>
-        <p>Case Game, une entreprise dynamique basée à Douala, développe le divertissement au Cameroun dans un objectif unique : améliorer l’individu et la société à travers le jeu. Nous croyons que le plaisir de jouer peut être un vecteur de valeurs humaines essentielles, un moyen d'encourager le développement personnel et collectif.</p>
-    </section>
+</div> 
 
-    <!-- Activités -->
-    <section id="activites">
-        <h2>Nos Activités</h2>
-        <h3>Tournois de jeux mobiles</h3>
-        <div class="section-img">
-            <img src="tournoi_jeux_mobile.jpg" alt="Jeune africain se développant par le jeu" onerror="this.style.display='none'">
-        </div>
-        <p>Case Game organise des tournois de jeux mobiles pour stimuler les compétences des joueurs et promouvoir l'e-sport au Cameroun. À chaque tournoi, des récompenses motivent les joueurs à exceller.</p>
-        <ul class="activities">
-            <li>Jeudi : League of Legends Wild Rift</li>
-            <li>Vendredi : Brawl Stars / Clash Royale</li>
-            <li>Samedi : Call of Duty</li>
-            <li>Dimanche : FC Mobile</li>
-        </ul>
+ 
 
-        <h3>Développement des réseaux sociaux</h3>
-        <div class="section-img">
-            <img src="reseaux_sociaux.jpg" alt="Réseaux sociaux" onerror="this.style.display='none'">
-        </div>
-        <p>Nous proposons des solutions pour développer votre présence en ligne. En augmentant votre visibilité, vous pourrez générer des revenus et attirer des partenariats stratégiques.</p>
+<div class="footer"> 
 
-        <h3>Salle de jeux vidéo</h3>
-        <div class="section-img">
-            <img src="image_groupe.jpg" alt="Salle de jeux vidéo" onerror="this.style.display='none'">
-        </div>
-        <p>Notre salle de jeux est conçue pour offrir une expérience de qualité à prix abordable, garantissant la sécurité et le confort de tous. Explorez nos espaces diversifiés pour des expériences uniques !</p>
+    <h2></h2> 
 
-        <h3>Watersoft : le jeu de tir stratégique</h3>
-        <div class="section-img">
-            <img src="watersoft.webp" alt="Jeu de tir stratégique Watersoft" onerror="this.style.display='none'">
-        </div>
-        <p>Case Game propose Watersoft, une arène de tir stratégique intérieure et extérieure, idéale pour les évènements de groupe et les aventures intenses, sous l'encadrement de notre équipe dédiée.</p>
+    <p>© 2024 Case Game SAS. Tous droits réservés.</p> 
 
-        <h3>Maisons Gonflables</h3>
-        <div class="section-img">
-            <img src="maison_gonflable.jpg" alt="Maisons gonflables" onerror="this.style.display='none'">
-        </div>
-        <p>Nos maisons gonflables sont parfaites pour tous types d'événements et conviennent à des publics de tous âges. Une animation de choix pour des moments de divertissement en famille ou entre amis.</p>
-    </section>
+</div> 
 
-    <!-- Valeurs -->
-    <section id="valeurs">
-        <h2>Nos Valeurs</h2>
-        <div class="section-img">
-            <img src="image_jeune_africain.webp" alt="Maisons gonflables" onerror="this.style.display='none'">
-        </div>
-        <p>Nous croyons en l'innovation, l'engagement, la qualité et le respect. Chez Case Game, nous utilisons le divertissement pour promouvoir l'inclusion, l'apprentissage et la solidarité. En valorisant ces principes, nous espérons inspirer nos communautés à travers le jeu.</p>
-    </section>
+ 
 
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Pour toute demande, n'hésitez pas à nous contacter à l'adresse suivante :</p>
-        <p><strong>Email :</strong> contact.casegame@gmail.com</p>
-    </section>
-</main>
+ 
 
-<footer>
-    <p>&copy; 2024 Case Game SAS. Tous droits réservés.</p>
-    <p>Siège social : Douala, Cameroun - RCCM : CM-DLA-01-2024-B12-00762</p>
-</footer>
+ <script src="./Site web final_files/script.js"></script>
 
-</body>
-</html>
+</body></html>
