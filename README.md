@@ -59,5 +59,5 @@ Pour toute demande, n'hésitez pas à nous contacter :
 
 ---
 
-© 2024 **Case Game SAS**. Tous droits réservés.  
+© 2026 **Case Game SAS**. Tous droits réservés.  
 Siège social : Douala, Cameroun - RCCM : CM-DLA-01-2024-B12-00762
