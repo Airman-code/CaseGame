@@ -1,418 +1,626 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-
-     
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-    <title>Case Game - Divertissement à Douala</title> 
-
-    <style> /* Reset box-sizing */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    padding: 10px;
-    background-color: black;
-    color: white;
-}
-
-/* Header */
-.header {
-    padding: 30px;
-    text-align: center;
-    background-color: gold;
-}
-
-.header h1 {
-    font-size: 50px;
-}
-
-/* Navigation */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-}
-
-.topnav a {
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.topnav a:hover {
-    background-color: gold;
-    color: black;
-}
-
-/* Layout */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.leftcolumn, .rightcolumn {
-    flex: 1;
-    padding: 20px;
-    color: white;
-}
-
-.leftcolumn {
-    flex: 63%;
-}
-
-.rightcolumn {
-    flex: 37%;
-    background-color: black;
-}
-
-/* Image and Cards */
-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    height: auto;
-}
-
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-}
-
-.card {
-    background-color: #333;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Footer */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #333;
-    margin-top: 20px;
-}
-
-/* Media Queries */
-@media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .topnav a {
-        width: 100%;
-    }
-}
-
-/* Slideshow */
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.mySlides {
-    display: none;
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.mySlides img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.fade {
-    animation: fadeEffect 1s;
-}
-
-@keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-}
-
-/* Navigation arrows */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 8px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
-    transition: background-color 0.3s;
-}
-
-.prev {
-    left: 5px;
-}
-
-.next {
-    right: 5px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-    </style> 
-
-</head> 
-
-<body> 
-
- 
-
-<div class="header"> 
-
-    <h1>Case Game</h1> 
-
-    <p>Divertissement à Douala</p> 
-
-</div> 
-
- 
-
-<div class="topnav"> 
-
-    <a href="#accueil">Accueil</a> 
-
-    <a href="#apropos">À propos</a> 
-
-    <a href="#services">Services</a> 
-
-    <a href="#gamespoints">Games Points</a> 
-
-    <a href="#tarifs">Tarifs</a> 
-
-    <a href="#recompenses">Récompenses</a> 
-
-    <a href="#galerie">Galerie</a> 
-
-    <a href=#contact" style="float:right">Contact</a> 
-
-</div> 
-
- 
-
-<div class="row"> 
-
-    <div class="leftcolumn"> 
-
-        <div class="card" id="accueil"> 
-
-            <h2>Plus que des jeux, c’est du sport.</h2> 
-
-            <p>Case Game vous accueille pour une expérience inédite de divertissement.</p> 
-
-        </div> 
-
-        <div class="card" id="services"> 
-
-            <h2>Nos Services</h2> 
-
-            <h3>Watersoft</h3> 
-
-            <p>Le Watersoft est un jeu de tirs stratégique utilisant des pistolets à orbeez. Sans douleur ni impact durable, il favorise la précision, la rapidité et l'esprit d'équipe.</p> 
-
-<video width="100%" controls>
-  <source src="Watersoft_video.mp4" type="video/mp4">
-  Votre navigateur ne prend pas en charge la lecture de la vidéo.
-</video>
-
-    </video> 
-
-             
-
-            <h3>Jeux mobiles</h3> 
-
-            <p>Affrontez d'autres joueurs et montrez votre talent !</p> 
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-            <img src="Jeux_mobile.jpg" width="460" height="345" alt="Jeux mobiles">
-            <h3>Salle de jeux vidéo</h3> 
-
-            <p>Découvrez nos consoles modernes et vintage.</p> 
-            <img src="Sallejeuxvideo.jpg" width="460" height="345" alt="Salle de jeux video">
-            <h3>Événements et compétitions</h3> 
-            <img src="events_img.jpg" width="460" height="345" alt="Evenements">
-            <p>Case Game organise régulièrement des événements et tournois avec des prix variés.</p> 
-
-        </div> 
-
-        <div class="card" id="gamespoints"> 
-
-            <h2>Games Points</h2> 
-            <img src="GPimages_img.jpg" width="460" height="345" alt="Games points">
-            <p>Notre monnaie interne pour accéder aux jeux et remporter des récompenses.</p> 
-
-            <h3>Les Games point s’achètent :</h3> 
-
-            <p>100 Games Points = 500 FCFA</p> 
-
-            <p>300 Games Points = 1000 FCFA</p> 
-
-            <p>1000 Games Points = 3000 FCFA</p> 
-
-            <h3>Les Games points se gagnent :</h3> 
-
-            <p>- Défi et challenges simples : 100 Games points à gagner</p> 
-
-            <p>- Petit concours et tournois : 300 Games points à gagner</p> 
-
-            <p>- Grand concours et tournois : 800 Games points à gagner</p> 
-
-        </div> 
-
-        <div class="card" id="tarifs"> 
-
-            <h2>Tarifs</h2> 
-
-            <p>Consultez les tarifs de nos différentes activités et événements.</p> 
-
-            <p>Utilisation simple des activités : 100 Games points</p> 
-
-            <p>Petit concours et tournois : 100 Games points par inscription</p> 
-
-            <p>Grand concours et tournois : 300 Games points par inscription</p> 
-
-            <p>Défi et challenges simples : Gratuit via inscription</p> 
-
-        </div> 
-        <div class="card" id="recompenses"> 
-
-            <h2>Récompenses</h2> 
-
-            <ul>
-                <li>Tickets d’échange pour des produits et services</li>
-                <li>Accès gratuit à certaines activités</li>
-                <li>Bons d’achat</li>
-                <li>Réductions sur les futurs tournois</li>
-                <li>Produits dérivés de Case Game</li>
-            </ul>
-            <img src="recp_image.jpg" width="600" height="415" alt="Récompenses">
-        </div>
-	<div class="card" id="contact"> 
-
-            <h2>Contact</h2>
-	<p>📷 Instagram :  
-    	<a href="https://www.instagram.com/casegame.cm?igsh=MXM1bHhlMDB2M2U5NQ==" target="_blank" rel="noopener noreferrer">
-        	@casegame.cm
-    	</a>
-	</p>
-
-	<p>📘 Facebook :  
-    	<a href="https://www.facebook.com/share/1F2xtSxAty/" target="_blank" rel="noopener noreferrer">
-        	Voir la page
-    	</a>
-	</p>
-
-	<p>🎵 TikTok :  
-    	<a href="https://www.tiktok.com/@casegame.cm?_t=ZN-8uvqlHzDH7O&amp;_r=1" target="_blank" rel="noopener noreferrer">
-        	@casegame.cm
-    	</a>
-	</p>
-
-	<p>📱 WhatsApp :  
-    	<a href="https://wa.me/237693465285" target="_blank" rel="noopener noreferrer">
-        	+237 693 46 52 85
-    	</a>
-	</p>
-	<p> Localisation :</p>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.8785745215864!2d9.70355417485393!3d4.025098647144115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10611317e0671dff%3A0x130d17f984008ba4!2sCASE%20GAME%20SAS%20-%20Salle%20de%20jeux!5e1!3m2!1sfr!2suk!4v1744998207779!5m2!1sfr!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-        </div>  
-    </div> 
-
-    <div class="rightcolumn"> 
-
-        <div class="card" id="apropos"> 
-
-            <h2>À propos de nous</h2> 
-
-            <img src="logo_casegame.png" width="300" height="345" alt="Logo"> 
-
-            <p>Case Game est une entreprise de divertissement qui permet aux joueurs de remporter des lots grâce à des défis, compétitions et tournois. Plus qu’un simple centre de loisirs, nous nous positionnons comme un acteur du développement et un créateur d’opportunités pour la population camerounaise.</p> 
-
-        </div> 
-
-        <div class="card" id=id="galerie"> 
-
-            <h2>Galerie</h2> 
-
-            <p>Photos et vidéos de nos événements et activités.</p> 
-        <div class="slideshow-container">
-
-        <div class="mySlides fade" style="display: block;">
-            <img src="Carroussel_1.jpg" style="width:30%">
-        </div>
-
-        <div class="mySlides fade" style="display: none;">
-            <img src="Carroussel_2.jpg" style="width:30%">
-        </div>
-
-        <div class="mySlides fade" style="display: none;">
-            <img src="Carroussel_3.jpg" style="width:30%">
-        </div>
-
-        <div class="mySlides fade" style="display: none;">
-            <img src="Carroussel_4.jpg" style="width:30%">
-        </div>
-
-        <!-- Boutons de navigation -->
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case Game à Douala : gaming, Wii, Watersoft, compétitions, packs, soutien scolaire, programme Gamer Solidaire et Vert, et association humanitaire.">
+  <meta property="og:title" content="Case Game - Plus que du jeu, du sport">
+  <meta property="og:description" content="Sessions de gaming, compétitions, packs, soutien scolaire, programme solidaire et association humanitaire à Douala.">
+  <meta property="og:image" content="logo_casegame.png">
+  <meta property="og:url" content="https://casegame.cm">
+  <meta property="og:type" content="website">
+  <title>Case Game - Plus que du jeu, du sport</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://wa.me">
+  <link rel="preconnect" href="https://www.instagram.com">
+  <link rel="preconnect" href="https://www.facebook.com">
+  <link rel="preconnect" href="https://www.tiktok.com">
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://www.gofundme.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Notification Bar -->
+  <div class="notification-bar">
+    <p>Nouvel événement ce week-end ! <a href="#competitions">Inscrivez-vous maintenant</a></p>
+    <button class="close-notification" aria-label="Fermer la notification">×</button>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero" id="accueil">
+    <div class="wrap hero-content">
+      <img class="hero-logo" src="logo_casegame.png" alt="Logo Case Game" loading="eager">
+      <div class="kicker">Douala · New Bell</div>
+      <h1>CASE <span>GAME</span></h1>
+      <p>Plus que des jeux, c'est du sport. Jouez, relevez des défis, entrez en compétition et transformez le gaming en expérience.</p>
+      <div class="actions">
+        <a class="btn primary" href="#offre" aria-label="Voir les offres de Case Game">Voir les offres</a>
+        <a class="btn" href="#gamer-solidaire" aria-label="Découvrir le programme Gamer Solidaire">Gamer Solidaire</a>
+        <a class="btn" href="#soutien" aria-label="Soutenir Case Game">Nous soutenir</a>
+      </div>
     </div>
-        </div> 
+  </header>
 
-         
+  <!-- Navigation -->
+  <nav aria-label="Navigation principale">
+    <div class="wrap nav-inner">
+      <div class="brand">CASE <b>GAME</b></div>
+      <button class="menu-toggle" aria-label="Ouvrir le menu">
+        <span class="hamburger"></span>
+      </button>
+      <div class="nav-links">
+        <a href="#offre">Offres</a>
+        <a href="#gamer-solidaire">Gamer Solidaire</a>
+        <a href="#ateliers">Ateliers</a>
+        <a href="#gamespoints">Games Points</a>
+        <a href="#equipe">Notre Équipe</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#apropos">À propos</a>
+        <a href="#soutien">Soutenez-nous</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    </div> 
+  <!-- Main Content -->
+  <main>
+    <!-- Offers Section -->
+    <section id="offre">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">🎮 L'expérience Case Game</div>
+            <h2>4 univers. Une expérience plus simple.</h2>
+          </div>
+          <p>Une lecture directe pour comprendre ce que l'on peut faire, combien cela coûte et comment participer.</p>
+        </div>
+        <div class="universe-grid">
+          <article class="universe u-blue" id="jouer">
+            <div class="universe-title">
+              <span class="icon">🎮</span>
+              <h3>Jouer</h3>
+            </div>
+            <p class="desc">Sessions libres sur consoles, Wii, Watersoft et jeux de société.</p>
+            <div class="items">
+              <div class="item">
+                <strong>PS4 / Xbox</strong>
+                <div class="price">350 FCFA · 30 min · 100 GP</div>
+                <div class="price">600 FCFA · 1 h · 200 GP</div>
+              </div>
+              <div class="item">
+                <strong>Wii</strong>
+                <div class="price">350 FCFA · 1 h · 100 GP</div>
+              </div>
+              <div class="item">
+                <strong>Watersoft</strong>
+                <div class="price">300 FCFA · une partie</div>
+                <p class="note">Jeu stratégique avec Gel Blaster Guns : moins douloureux, propre et 100% sécurisé.</p>
+              </div>
+              <div class="item">
+                <strong>Jeux de société</strong>
+                <div class="price">100 FCFA · la session</div>
+              </div>
+            </div>
+          </article>
+          <article class="universe u-orange" id="competitions">
+            <div class="universe-title">
+              <span class="icon">🏆</span>
+              <h3>Compétitions</h3>
+            </div>
+            <p class="desc">Ligues, tournois, défis et mini-défis pour se challenger régulièrement.</p>
+            <div class="items">
+              <div class="item">
+                <strong>Tournoi 18+</strong>
+                <div class="price">1 000 FCFA · inscription</div>
+                <div class="note">Chaque mois · 30 000 FCFA à gagner · 18 ans minimum.</div>
+              </div>
+              <div class="item">
+                <strong>Ligue Wii</strong>
+                <div class="price">Inscription gratuite</div>
+                <div class="note">500 Games Points pour le gagnant.</div>
+              </div>
+              <div class="item">
+                <strong>Tournoi hebdomadaire</strong>
+                <div class="price">200 FCFA · inscription</div>
+                <div class="note">500 Games Points à gagner.</div>
+              </div>
+              <div class="item">
+                <strong>Défis & mini-défis</strong>
+                <div class="note">Quiz, jeux de société, cache-cache et animations Case Game. Gagnez des Games Points sans rien acheter !</div>
+              </div>
+            </div>
+          </article>
+          <article class="universe u-pink" id="packs">
+            <div class="universe-title">
+              <span class="icon">🎟</span>
+              <h3>Packs</h3>
+            </div>
+            <p class="desc">Des formules pensées pour jouer plus longtemps ou à certains horaires.</p>
+            <div class="items">
+              <div class="item">
+                <strong>After School</strong>
+                <div class="price">500 FCFA · 1 h</div>
+                <div class="note">De 16 h à 18 h.</div>
+              </div>
+              <div class="item">
+                <strong>Week-end</strong>
+                <div class="price">1 500 FCFA · 3 h</div>
+              </div>
+              <div class="item">
+                <strong>Matinal</strong>
+                <div class="price">400 FCFA · 1 h</div>
+                <div class="note">De 11 h à 13 h.</div>
+              </div>
+              <div class="item">
+                <strong>Abonnement mensuel</strong>
+                <div class="price">10 000 FCFA</div>
+                <div class="note">Accès illimité.</div>
+              </div>
+            </div>
+          </article>
+          <article class="universe u-green" id="apprendre">
+            <div class="universe-title">
+              <span class="icon">📚</span>
+              <h3>Apprendre</h3>
+            </div>
+            <p class="desc">Soutien scolaire et gaming éducatif du CP à la Terminale. Associez effort, plaisir et réussite !</p>
+            <p class="desc">
+              <a href="https://forms.gle/sT35DmzL5SRp9g1h9" target="_blank" rel="noopener noreferrer" class="btn small">
+                S'inscrire au soutien scolaire
+              </a>
+            </p>
+            <div class="items">
+              <div class="item">
+                <strong>Standard</strong>
+                <div class="price">5 000 FCFA / mois</div>
+                <div class="note">2 séances/semaine · IA éducative · exercices et suivi · 200 GP/semaine · bonus assiduité +100 GP/mois.</div>
+              </div>
+              <div class="item">
+                <strong>Intensif</strong>
+                <div class="price">10 000 FCFA / mois</div>
+                <div class="note">4 séances/semaine · suivi individuel · 400 GP/semaine · tournois Case Game inclus.</div>
+              </div>
+              <div class="item">
+                <strong>Excellence</strong>
+                <div class="price">15 000 FCFA / mois</div>
+                <div class="note">Accès illimité · coaching complet · bilan parental · 600 GP/semaine · événements exclusifs.</div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="media-grid">
+          <div class="media-card">
+            <img src="Devanture.jpg" alt="Salle de jeux vidéo Case Game" loading="lazy">
+          </div>
+          <div class="media-card">
+            <video controls preload="metadata" aria-label="Présentation de Case Game">
+              <source src="cgpresentation.mp4" type="video/mp4">
+              Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</div> 
+    <!-- Gamer Solidaire et Vert Section -->
+    <section id="gamer-solidaire">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">🌱 Programme Solidaire</div>
+            <h2>Gamer Solidaire et Vert</h2>
+          </div>
+          <p>Agissez, gagnez, jouez ! Des missions d'entraide locale pour les jeunes de New Bell : aide aux habitants, actions écologiques, transport...</p>
+        </div>
+        <div class="gamer-solidaire-content">
+          <div class="gamer-solidaire-features">
+            <div class="feature">
+              <div class="feature-icon">🤝</div>
+              <h3>Solidarité Locale</h3>
+              <p>Aide aux habitants et actions communautaires.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🌱</div>
+              <h3>Écologie & Voisinage</h3>
+              <p>Nettoyage, recyclage et actions pour un quartier plus vert.</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🎮</div>
+              <h3>Récompenses en Jeux</h3>
+              <p>Échangez vos Games Points contre du temps de jeu et des cadeaux.</p>
+            </div>
+          </div>
 
- 
+          <div class="gamer-solidaire-steps">
+            <h3>Comment participer ?</h3>
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Proposez des missions</h4>
+                  <p>Soumettez vos idées de missions solidaires ou écologiques.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Participez et aidez !</h4>
+                  <p>Engagez-vous dans les missions validées par Case Game.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Gagnez des Games Points !</h4>
+                  <p>Accumulez des points et échangez-les contre des récompenses.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div class="footer"> 
+          <div class="gamer-solidaire-odds">
+            <h3>Aligné sur les Objectifs de Développement Durable de l'ONU</h3>
+            <div class="odds-grid">
+              <div class="odd"><div class="odd-icon">📚</div><p>Éducation de qualité</p></div>
+              <div class="odd"><div class="odd-icon">💼</div><p>Travail décent</p></div>
+              <div class="odd"><div class="odd-icon">🏙️</div><p>Villes durables</p></div>
+              <div class="odd"><div class="odd-icon">🌍</div><p>Climat</p></div>
+              <div class="odd"><div class="odd-icon">🤝</div><p>Partenariats</p></div>
+            </div>
+          </div>
 
-    <h2></h2> 
+          <div class="gamer-solidaire-cta">
+            <a href="https://forms.gle/tHEkU2qsQpWJhYMC6" target="_blank" rel="noopener noreferrer" class="btn primary">
+              S'inscrire au programme Gamer Solidaire et Vert
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p>© 2024 Case Game SAS. Tous droits réservés.</p> 
+    <!-- Ateliers et Actions Sociales Section -->
+    <section id="ateliers">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">🏫 Engagement Communautaire</div>
+            <h2>Ateliers Gratuits & Actions Sociales</h2>
+          </div>
+          <p>Case Game s'engage pour la jeunesse et la communauté de New Bell.</p>
+        </div>
+        <div class="social-actions-grid">
+          <article class="social-action">
+            <div class="action-icon">🎓</div>
+            <h3>Ateliers Gratuits</h3>
+            <p>Découvrez l’histoire africaine, la géographie, l’environnement, l’art et la citoyenneté dans une ambiance conviviale et participative.</p>
+          </article>
+          <article class="social-action">
+            <div class="action-icon">👶🏾</div>
+            <h3>Journées avec les Orphelins</h3>
+            <p>Promotion des filles et journées spéciales avec les orphelins pour leur offrir du réconfort et des moments de joie.</p>
+          </article>
+          <article class="social-action">
+            <div class="action-icon">🤝</div>
+            <h3>Partenariats</h3>
+            <p>S'associer à Case Game permet de renforcer l'attrait et l'implication envers votre organisation, de communiquer vos valeurs et de soutenir un effort citoyen pour préserver la jeunesse camerounaise.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</div> 
+    <!-- Games Points Section -->
+    <section class="games" id="gamespoints">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">🎟 Système de Récompenses</div>
+            <h2>Jouer, participer, gagner.</h2>
+          </div>
+          <p>Les Games Points sont intégrés aux sessions et aux récompenses de plusieurs formats Case Game. Échangez-les contre du temps de jeu, des cadeaux ou des réductions.</p>
+        </div>
+        <div class="gp-grid">
+          <div class="gp"><b>100 GP</b><span>PS4/Xbox 30 min</span></div>
+          <div class="gp"><b>200 GP</b><span>PS4/Xbox 1 h</span></div>
+          <div class="gp"><b>500 GP</b><span>Champion Ligue Wii</span></div>
+          <div class="gp"><b>500 GP</b><span>Tournoi hebdomadaire</span></div>
+        </div>
+      </div>
+    </section>
 
- 
+    <!-- Notre Équipe Section -->
+    <section id="equipe">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">👥 Qui sommes-nous ?</div>
+            <h2>Notre Équipe</h2>
+          </div>
+          <p>Une équipe passionnée pour offrir la meilleure expérience gaming et solidaire.</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-section">
+            <h3>Direction</h3>
+            <div class="team-members">
+              <div class="team-member">
+                <div class="member-avatar">👨🏾‍💼</div>
+                <div class="member-info">
+                  <h4>Hermann OSSENGUE TCHUENGOUA</h4>
+                  <p><strong>Président</strong></p>
+                  <p>Ingénieur Génie civil, United Kingdom</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="member-avatar">👨🏾‍💻</div>
+                <div class="member-info">
+                  <h4>Mickael KALKAN</h4>
+                  <p><strong>Directeur Communication & Marketing</strong></p>
+                  <p>Chef de projet informatique, France</p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="member-avatar">👨🏾‍⚕️</div>
+                <div class="member-info">
+                  <h4>Martin NGAMO</h4>
+                  <p><strong>Directeur Opérations & Logistique</strong></p>
+                  <p>Infirmier, USA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team-section">
+            <h3>Agents d'activités</h3>
+            <div class="team-members">
+              <div class="team-member">
+                <div class="member-avatar">👨🏾‍🏫</div>
+                <div class="member-info">
+                  <h4>Alain NDJHEMELE SINHA</h4>
+                  <p><strong>Chef Agent d'activités</strong></p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="member-avatar">👨🏾‍🏫</div>
+                <div class="member-info">
+                  <h4>Marc YATCHOU LAKOUNDJI</h4>
+                  <p><strong>Agent d'activités</strong></p>
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="member-avatar">👨🏾‍🏫</div>
+                <div class="member-info">
+                  <h4>Arnold BOTCHAC</h4>
+                  <p><strong>Gérant d'activités</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
- 
+    <!-- Galerie Section -->
+    <section id="galerie">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">📸</div>
+            <h2>Case Game en images.</h2>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_1.jpg" alt="Galerie Case Game 1" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_2.jpg" alt="Galerie Case Game 2" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_3.jpg" alt="Galerie Case Game 3" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_4.jpg" alt="Galerie Case Game 4" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_5a.jpg" alt="Galerie Case Game 5" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_6.jpg" alt="Galerie Case Game 6" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_7.jpg" alt="Galerie Case Game 7" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_8.jpg" alt="Galerie Case Game 8" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_9.jpg" alt="Galerie Case Game 9" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_10.jpg" alt="Galerie Case Game 10" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_11.jpg" alt="Galerie Case Game 11" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_12.jpg" alt="Galerie Case Game 12" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: none;">
+            <img src="Carroussel_13.jpg" alt="Galerie Case Game 13" loading="lazy">
+          </div>
+          <div class="mySlides" style="display: block;">
+            <img src="Carroussel_14.jpg" alt="Galerie Case Game 14" loading="lazy">
+          </div>
+          <a class="prev" onclick="plusSlides(-1)" aria-label="Image précédente">❮</a>
+          <a class="next" onclick="plusSlides(1)" aria-label="Image suivante">❯</a>
+          <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
 
- <script src="script.js"></script>
+    <!-- À propos + Récompenses Section -->
+    <section id="apropos">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">ℹ️</div>
+            <h2>À propos de Case Game</h2>
+          </div>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <img class="logo-large" src="logo_casegame.png" alt="Logo Case Game" loading="lazy">
+            <h3>Notre Mission</h3>
+            <p>Case Game est une entreprise de divertissement qui permet aux joueurs de remporter des lots grâce à des défis, compétitions et tournois. Plus qu’un simple centre de loisirs, Case Game se positionne comme un acteur du développement et un créateur d’opportunités pour la population camerounaise.</p>
+            <p><strong>Notre vision :</strong> Utiliser le divertissement comme un outil pour le développement personnel, communautaire et social. Le divertissement permet d'égayer la vie quotidienne, de transmettre des valeurs et de favoriser l'acquisition de compétences.</p>
+          </article>
+          <article class="panel" id="recompenses">
+            <div class="eyebrow">🎁</div>
+            <h3>Le jeu continue après la partie.</h3>
+            <p>Les Games Points peuvent être échangés contre :</p>
+            <ul class="rewards">
+              <li>Tickets d’échange pour des produits et services</li>
+              <li>Accès gratuit à certaines activités</li>
+              <li>Bons d’achat</li>
+              <li>Réductions sur les futurs tournois</li>
+              <li>Produits dérivés Case Game</li>
+            </ul>
+            <img src="recp_image.jpg" alt="Récompenses Case Game" loading="lazy">
+          </article>
+        </div>
+      </div>
+    </section>
 
-</body></html>
+    <!-- Soutien Section -->
+    <section id="soutien">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">❤️</div>
+            <h2>Soutenez Case Game Association</h2>
+          </div>
+          <p>Case Game ne construit pas uniquement comme une structure commerciale. Pour atteindre sa mission, elle a besoin de collecter des dons et redistribuer son service à la communauté.</p>
+        </div>
+        <div class="soutien-content">
+          <div class="soutien-intro">
+            <h3>Pourquoi nous soutenir ?</h3>
+            <ul>
+              <li>✅ <strong>Soutenir la jeunesse camerounaise</strong> : Offrir un avenir différent aux jeunes de New Bell.</li>
+              <li>✅ <strong>Promouvoir la culture gaming</strong> : Développer l'esport, le manga et la création de contenus au Cameroun.</li>
+              <li>✅ <strong>Encourager l'innovation numérique</strong> : Offrir des perspectives dans le domaine du numérique et du développement de jeux vidéo.</li>
+              <li>✅ <strong>Renforcer l'impact social</strong> : Participer à des actions humanitaires et solidaires.</li>
+            </ul>
+          </div>
+          <div class="soutien-cta">
+            <p><strong>Un grand merci à la diaspora et aux personnes sensibles aux causes humanitaires et sociales !</strong></p>
+            <a href="https://www.gofundme.com/u/45289b44-f72b-4a12-9b37-65c07d29b750" target="_blank" rel="noopener noreferrer" class="btn primary">
+              Faire un don sur GoFundMe
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">📍</div>
+            <h2>On se retrouve à Case Game ?</h2>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <article class="panel">
+            <h3>Horaires & Localisation</h3>
+            <p><strong>Lundi - Samedi :</strong> 10h - 22h</p>
+            <p><strong>Dimanche :</strong> 12h - 20h</p>
+            <p><strong>Adresse :</strong> Hôtel Fatime Babylone, New Bell, Douala</p>
+            <div class="contact-links">
+              <a href="mailto:contact.casegame@gmail.com" target="_blank" rel="noopener noreferrer">
+                📧 Email · contact.casegame@gmail.com
+              </a>
+              <a href="https://www.instagram.com/casegame.cm?igsh=MXM1bHhlMDB2M2U5NQ==" target="_blank" rel="noopener noreferrer">
+                Instagram · @casegame.cm
+              </a>
+              <a href="https://www.facebook.com/share/1F2xtSxAty/" target="_blank" rel="noopener noreferrer">
+                Facebook · Case Game
+              </a>
+              <a href="https://www.tiktok.com/@casegame.cm?_t=ZN-8uvqlHzDH7O&amp;_r=1" target="_blank" rel="noopener noreferrer">
+                TikTok · @casegame.cm
+              </a>
+              <a href="https://youtube.com/@casegamesas?si=9NSpUXPQ4Dkas_yC" target="_blank" rel="noopener noreferrer">
+                YouTube · @casegamesas
+              </a>
+              <a href="https://wa.me/237686844407" target="_blank" rel="noopener noreferrer">
+                WhatsApp · +237 686 84 44 07
+              </a>
+              <a href="https://maps.app.goo.gl/HanvxM4Gn9eRg7XG9" target="_blank" rel="noopener noreferrer">
+                📍 Localisation · Voir sur Google Maps
+              </a>
+              <a href="https://www.gofundme.com/u/45289b44-f72b-4a12-9b37-65c07d29b750" target="_blank" rel="noopener noreferrer">
+                ❤️ Soutenez-nous · GoFundMe
+              </a>
+            </div>
+          </article>
+          <article class="panel">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.054847915325!2d9.7067474!3d4.024287099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10611317e0671dff%3A0x130d17f984008ba4!2sCASE%20GAME%20SAS%20-%20Salle%20de%20jeux!5e1!3m2!1sfr!2suk!4v1791622089919!5m2!1sfr!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <strong>CASE GAME</strong>
+            <h2>Plus que des jeux, c'est du sport.</h2>
+          </div>
+          <a class="btn" href="https://wa.me/237686844407" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Liens utiles</h3>
+          <a href="#mentions">Mentions légales</a>
+          <a href="#confidentialite">Politique de confidentialité</a>
+          <a href="#gamer-solidaire">Programme Gamer Solidaire</a>
+          <a href="#soutien">Soutenez Case Game</a>
+        </div>
+      </div>
+      <p>© 2026 Case Game. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/237686844407" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="S'inscrire sur WhatsApp">
+    📱 Inscription sur WhatsApp
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
