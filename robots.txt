@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /FINAL.html
+Disallow: /cglaude.index.html
+
+Sitemap: https://casegamecm.com/sitemap.xml
