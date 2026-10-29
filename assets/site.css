@@ -670,6 +670,37 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 110px; }
 .gp-foot strong { color: var(--chalk); }
 .gp-wa { color: var(--chalk); font-weight: 700; text-underline-offset: 4px; margin-left: 6px; }
 
+/* ---------- FAQ ---------- */
+.faq { margin-top: 40px; border-top: 1px solid var(--line-strong); max-width: 860px; }
+.faq-item { border-bottom: 1px solid var(--line-strong); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 4px;
+  min-height: 56px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-family: var(--display);
+  font-size: 28px;
+  line-height: 1;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+}
+.faq-item[open] summary::after { content: "–"; background: var(--accent); color: var(--on-accent); }
+.faq-item h3 { font-size: 19px; text-transform: none; font-family: var(--body); font-weight: 700; line-height: 1.35; }
+.faq-item p { color: var(--chalk-dim); padding: 0 4px 22px; max-width: 70ch; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .hero-grid, .split, .board, .info-grid, .about { grid-template-columns: 1fr; }
