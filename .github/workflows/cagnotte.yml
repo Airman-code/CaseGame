@@ -1,0 +1,39 @@
+name: Mise à jour de la cagnotte
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # toutes les 6 heures
+  workflow_dispatch:         # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cagnotte
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Lire la cagnotte GoFundMe
+        run: python scripts/update_cagnotte.py
+
+      - name: Publier si le montant a changé
+        run: |
+          if git diff --quiet assets/cagnotte.json; then
+            echo "Rien à publier."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cagnotte.json
+          git commit -m "Cagnotte : mise à jour automatique du montant"
+          git push

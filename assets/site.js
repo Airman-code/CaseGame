@@ -91,25 +91,49 @@ function setUpMap() {
   });
 }
 
-// Cagnotte : la barre n'apparaît qu'à partir du premier don
-function showFundraising() {
+// Cagnotte : montant, objectif et donateurs lus dans assets/cagnotte.json,
+// que GitHub met à jour toutes les 6 heures à partir de la page GoFundMe
+const CAGNOTTE_URL = new URL("cagnotte.json", document.currentScript.src);
+const XAF_PER_EUR = 655.957;
+
+async function showFundraising() {
   const goal = document.getElementById("goal");
   if (!goal) return;
-  const target = Number(goal.dataset.goal);
-  const raised = Number(goal.dataset.raised);
-  const donors = Number(goal.dataset.donors);
-  if (!raised) return;
-  const percent = Math.min(100, Math.round((raised / target) * 100));
+  let data;
+  try {
+    data = await (await fetch(CAGNOTTE_URL, { cache: "no-cache" })).json();
+  } catch {
+    return; // sans données, on garde le message d'origine
+  }
+  const locale = EN ? "en-GB" : "fr-FR";
+  const fmt = (n) => Math.round(n).toLocaleString(locale);
+  const percent = Math.min(100, Math.round((data.raised / data.goal) * 100));
+  const fcfa = Math.round((data.goal * XAF_PER_EUR) / 1000) * 1000;
+
+  goal.querySelector(".goal-amount").textContent = fmt(data.goal);
+  goal.querySelector(".goal-fcfa").textContent = EN ? "about " + fmt(fcfa) + " FCFA" : "soit environ " + fmt(fcfa) + " FCFA";
   goal.querySelector(".progress").hidden = false;
   goal.querySelector(".goal-first").hidden = true;
+
   const bar = goal.querySelector(".bar");
-  bar.setAttribute("aria-valuenow", raised);
+  bar.setAttribute("aria-valuemax", data.goal);
+  bar.setAttribute("aria-valuenow", data.raised);
   bar.firstElementChild.style.width = percent + "%";
-  goal.querySelector(".progress-text").textContent = EN
-    ? "€" + raised.toLocaleString("en-GB") + " raised so far (" + percent + "%)" +
-      (donors ? " from " + donors + " donor" + (donors > 1 ? "s" : "") : "") + ". Thank you!"
-    : "Déjà " + raised.toLocaleString("fr-FR") + " € récoltés (" + percent + " %)" +
+
+  const donors = data.donors;
+  let text;
+  if (!data.raised) {
+    text = EN
+      ? "€0 raised of €" + fmt(data.goal) + ": be the first to give!"
+      : "0 € récoltés sur " + fmt(data.goal) + " € : soyez le premier donateur !";
+  } else if (EN) {
+    text = "€" + fmt(data.raised) + " raised of €" + fmt(data.goal) + " (" + percent + "%)" +
+      (donors ? " from " + donors + " donor" + (donors > 1 ? "s" : "") : "") + ". Thank you!";
+  } else {
+    text = fmt(data.raised) + " € récoltés sur " + fmt(data.goal) + " € (" + percent + " %)" +
       (donors ? " grâce à " + donors + " donateur" + (donors > 1 ? "s" : "") : "") + ". Merci !";
+  }
+  goal.querySelector(".progress-text").textContent = text;
 }
 
 showOpeningStatus();

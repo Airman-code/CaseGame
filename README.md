@@ -18,8 +18,9 @@ En ligne : https://casegamecm.com (hébergé sur GitHub Pages, domaine chez OVH)
 
 ## Mettre à jour la cagnotte
 
-Dans `index.html`, modifier `data-raised` (montant en €) et `data-donors` sur l'élément `id="goal"`.
-La barre de progression s'affiche dès que le montant est supérieur à 0.
+Automatique : `.github/workflows/cagnotte.yml` lance `scripts/update_cagnotte.py` toutes les 6 heures.
+Le script lit la page publique GoFundMe et met à jour `assets/cagnotte.json` (montant, objectif, donateurs) ;
+la barre des pages FR et EN se met à jour toute seule. Lancement manuel : onglet Actions de GitHub → « Mise à jour de la cagnotte » → Run workflow.
 
 ## Publier
 
