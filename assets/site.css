@@ -741,6 +741,14 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 110px; }
 .menu .btn.don { color: var(--chalk); border-color: var(--line-strong); min-height: 44px; padding: 8px 16px; margin-left: 8px; }
 .menu .btn.don:hover { background: var(--chalk); color: var(--ink); }
 
+.progress { margin-top: 12px; max-width: 460px; }
+.progress .bar { height: 14px; border: 2px solid var(--ink); border-radius: 999px; overflow: hidden; background: #fff; }
+.progress .bar span { display: block; height: 100%; background: var(--ink); width: 0; }
+.progress-text { margin-top: 8px; font-weight: 700; }
+
+.menu a.lang { font-family: var(--display); font-weight: 700; color: var(--chalk); border: 1px solid var(--line-strong); padding: 8px 12px; }
+.menu a.lang:hover { background: var(--chalk); color: var(--ink); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .hero-grid, .split, .board, .info-grid, .about, .campaign-grid { grid-template-columns: 1fr; }

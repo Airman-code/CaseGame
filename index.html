@@ -6,6 +6,9 @@
   <title>Case Game Douala – Salle de jeux vidéo et esport à New Bell</title>
   <meta name="description" content="Case Game, salle de jeux vidéo à Douala (New Bell) : PS4, Xbox, Wii dès 350 FCFA, tournois chaque semaine, Watersoft, Games Points et association jeunesse.">
   <link rel="canonical" href="https://casegamecm.com/">
+  <link rel="alternate" hreflang="fr" href="https://casegamecm.com/">
+  <link rel="alternate" hreflang="en" href="https://casegamecm.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://casegamecm.com/">
   <meta name="theme-color" content="#07080a">
 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -301,7 +304,7 @@
             "name": "Qu'est-ce que le Watersoft ?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Le Watersoft est un jeu de tir stratégique en équipe avec des lanceurs à billes de gel (Gel Blaster). Les billes éclatent à l'impact : c'est moins douloureux que l'airsoft et cela ne salit pas. Chez Case Game, chaque partie coûte 300 FCFA et se joue encadrée par l'équipe, avec les protections fournies."
+              "text": "Le Watersoft est un jeu de tir stratégique en équipe avec des lanceurs à billes d'eau (billes de gel gorgées d'eau, type Gel Blaster). Les billes éclatent à l'impact : c'est moins douloureux que l'airsoft et cela ne salit pas. Chez Case Game, chaque partie coûte 300 FCFA, se joue dès 8 ans et toujours encadrée par l'équipe, avec les protections fournies."
             }
           },
           {
@@ -366,6 +369,7 @@
         <a href="#tournois">Tournois</a>
         <a href="#association">Association</a>
         <a href="#infos">Infos pratiques</a>
+        <a class="lang" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
         <a class="btn ghost don" href="#campagne"><svg class="i"><use href="#i-heart"/></svg> Faire un don</a>
         <a class="btn solid" href="https://wa.me/237686844407" target="_blank" rel="noopener">
           <svg class="i"><use href="#i-chat"/></svg> Réserver
@@ -410,9 +414,14 @@
           <p class="label">Campagne 2026 · Association Case Game</p>
           <h2 id="campagne-titre">Aidez 50 orphelins de Douala à réussir à l'école.</h2>
           <p class="campaign-text">Avec l'orphelinat « L'Arche de Mummy », nous offrons à 50 enfants un soutien scolaire complet : cahiers d'exercices personnalisés, suivi régulier par notre équipe, une sortie par mois et des petits-déjeuners.</p>
-          <div class="goal">
+          <!-- Mettre à jour data-raised (en €) et data-donors à partir de la page GoFundMe -->
+          <div class="goal" id="goal" data-goal="2500" data-raised="0" data-donors="0">
             <div><b>Objectif : 2 500 €</b><span>soit environ 1 640 000 FCFA</span></div>
-            <p>Soyez parmi les premiers donateurs : chaque don lance la dynamique.</p>
+            <div class="progress" hidden>
+              <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="2500" aria-label="Montant récolté"><span></span></div>
+              <p class="progress-text"></p>
+            </div>
+            <p class="goal-first">Soyez parmi les premiers donateurs : chaque don lance la dynamique.</p>
           </div>
           <div class="campaign-actions">
             <a class="btn solid" href="https://www.gofundme.com/f/renforcer-la-reussite-scolaire-des-orphelins" target="_blank" rel="noopener"><svg class="i"><use href="#i-heart"/></svg> Je fais un don</a>
@@ -458,7 +467,7 @@
               <li><span class="what">PS4 / Xbox <small>30 minutes · ou 100 GP</small></span><span class="fill"></span><span class="amount">350 <small>FCFA</small></span></li>
               <li><span class="what">PS4 / Xbox <small>1 heure · ou 200 GP</small></span><span class="fill"></span><span class="amount">600 <small>FCFA</small></span></li>
               <li><span class="what">Wii <small>1 heure · ou 100 GP</small></span><span class="fill"></span><span class="amount">350 <small>FCFA</small></span></li>
-              <li><span class="what">Watersoft <small>une partie, encadrée par l'équipe</small></span><span class="fill"></span><span class="amount">300 <small>FCFA</small></span></li>
+              <li><span class="what">Watersoft <small>une partie, encadrée par l'équipe · dès 8 ans</small></span><span class="fill"></span><span class="amount">300 <small>FCFA</small></span></li>
               <li><span class="what">Jeux de société <small>la session</small></span><span class="fill"></span><span class="amount">100 <small>FCFA</small></span></li>
             </ul>
           </div>
@@ -508,7 +517,7 @@
           <p class="gp-foot">Tu peux aussi <strong>gagner des GP gratuitement</strong> : tournois, défis quotidiens et missions solidaires. <a class="gp-wa" href="https://wa.me/237686844407" target="_blank" rel="noopener">Recharger à la salle ou sur WhatsApp</a></p>
         </div>
 
-        <p class="note-small">Paiement sur place, en espèces ou Mobile Money. Conditions d'annulation et de remboursement : voir la <a href="remboursement.html">politique de remboursement</a>.</p>
+        <p class="note-small">Tous les prix sont indiqués en francs CFA (FCFA), toutes taxes comprises (TTC). Paiement sur place, en espèces ou Mobile Money. Conditions d'annulation et de remboursement : voir la <a href="remboursement.html">politique de remboursement</a>.</p>
       </div>
     </section>
 
@@ -641,7 +650,7 @@
           </details>
           <details class="faq-item">
             <summary><h3>Qu'est-ce que le Watersoft ?</h3></summary>
-            <p>Le Watersoft est un jeu de tir stratégique en équipe avec des lanceurs à billes de gel (Gel Blaster). Les billes éclatent à l'impact : c'est moins douloureux que l'airsoft et cela ne salit pas. Chez Case Game, chaque partie coûte 300 FCFA et se joue encadrée par l'équipe, avec les protections fournies.</p>
+            <p>Le Watersoft est un jeu de tir stratégique en équipe avec des lanceurs à billes d'eau (billes de gel gorgées d'eau, type Gel Blaster). Les billes éclatent à l'impact : c'est moins douloureux que l'airsoft et cela ne salit pas. Chez Case Game, chaque partie coûte 300 FCFA, se joue dès 8 ans et toujours encadrée par l'équipe, avec les protections fournies.</p>
           </details>
           <details class="faq-item">
             <summary><h3>Y a-t-il des tournois de jeux vidéo à Douala ?</h3></summary>

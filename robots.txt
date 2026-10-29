@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /FINAL.html
-Disallow: /cglaude.index.html
 Disallow: /legal/
 Disallow: /maquette/
 
