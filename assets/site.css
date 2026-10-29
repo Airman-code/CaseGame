@@ -701,9 +701,49 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 110px; }
 .faq-item h3 { font-size: 19px; text-transform: none; font-family: var(--body); font-weight: 700; line-height: 1.35; }
 .faq-item p { color: var(--chalk-dim); padding: 0 4px 22px; max-width: 70ch; }
 
+/* ---------- Campagne de dons ---------- */
+.campaign { background: var(--chalk); color: var(--ink); padding: 72px 0; }
+.campaign .label { color: var(--ink); }
+.campaign-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
+.campaign h2 { max-width: 16ch; }
+.campaign-text { margin-top: 18px; font-size: 18px; color: #3d3a33; max-width: 52ch; }
+.goal {
+  margin-top: 24px;
+  border-left: 6px solid var(--ink);
+  padding: 6px 0 6px 18px;
+}
+.goal b { font-family: var(--display); font-size: 28px; text-transform: uppercase; display: block; line-height: 1.1; }
+.goal span { color: #4a453c; font-weight: 600; }
+.goal p { margin-top: 8px; font-weight: 700; }
+.campaign-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.campaign .btn.solid { background: var(--ink); border-color: var(--ink); color: var(--chalk); font-size: 17px; }
+.campaign .btn.ghost { border-color: var(--ink); color: var(--ink); }
+.campaign .btn.ghost:hover { background: var(--ink); color: var(--chalk); }
+.campaign :focus-visible { outline-color: var(--ink); }
+.campaign-trust { margin-top: 16px; font-size: 14px; color: #4a453c; max-width: 56ch; }
+.impact { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.impact li {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 18px;
+  align-items: center;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+}
+.impact b { grid-row: span 2; font-family: var(--display); font-size: 40px; line-height: 1; }
+.impact .fcfa { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: #4a453c; }
+.impact span:last-child { font-weight: 600; }
+.impact li.featured { background: var(--ink); color: var(--chalk); transform: translateX(-12px); box-shadow: 12px 12px 0 rgba(14, 13, 11, 0.18); }
+.impact li.featured .fcfa { color: var(--chalk-dim); }
+.menu .btn.don { color: var(--chalk); border-color: var(--line-strong); min-height: 44px; padding: 8px 16px; margin-left: 8px; }
+.menu .btn.don:hover { background: var(--chalk); color: var(--ink); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
-  .hero-grid, .split, .board, .info-grid, .about { grid-template-columns: 1fr; }
+  .hero-grid, .split, .board, .info-grid, .about, .campaign-grid { grid-template-columns: 1fr; }
   .hero-photo { max-width: 560px; }
   .asso-grid, .team { grid-template-columns: 1fr 1fr; }
   .facts { grid-template-columns: 1fr 1fr; }
@@ -740,6 +780,10 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 110px; }
   .gp-packs { grid-template-columns: 1fr; gap: 20px; }
   .gp-shop { padding: 22px; }
   .gp-shop-head { flex-direction: column; align-items: flex-start; }
+  .impact li.featured { transform: none; }
+  .impact li { grid-template-columns: 76px 1fr; padding: 16px; }
+  .impact b { font-size: 32px; }
+  .menu .btn.don { margin: 8px 0 0; justify-content: center; }
   .event .when { justify-self: start; }
   .event .fee { text-align: left; }
   .sticker { left: 10px; }
