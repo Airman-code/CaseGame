@@ -8,6 +8,7 @@ Réponds toujours en français, simplement : le propriétaire n'est pas dévelop
 - Dans ce cas : pas d'accès à son Chrome (Google, Facebook, Bing…) ; tout se fait par le dépôt.
   Travailler sur `main`, `git pull` avant, `python build.py`, vérifier, puis pousser sur `main` après accord du client
   (si la session a créé une branche, la fusionner dans `main`, sinon rien n'est en ligne).
+- Dépôt volontairement public (30/10/2026 : le client refuse GitHub Pro ; en privé, GitHub Pages gratuit couperait le site). Ne jamais committer de secret.
 - Ce dossier `.claude/` est dans le dépôt (public) mais n'est pas servi par le site. Ne jamais y mettre de mot de passe.
 
 ## Fonctionnement technique
