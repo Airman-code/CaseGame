@@ -207,7 +207,7 @@ def build():
         body = "\n".join("      " + line if line else "" for line in body.split("\n"))
         page = TEMPLATE.format(
             title=html.escape(meta["title"]),
-            full_title=html.escape(meta["title"] if "Case Game" in meta["title"] else meta["title"] + " – Case Game"),
+            full_title=html.escape(meta["title"] if "Case Game" in meta["title"] or len(meta["title"]) > 50 else meta["title"] + " – Case Game"),
             description=html.escape(meta["description"]),
             url=url, root=root, image=image, jsonld=jsonld, crumbs_html=crumbs_html, content=body,
             og_type="article" if kind == "article" else "website",

@@ -802,7 +802,7 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 110px; }
 .post-card { display: block; text-decoration: none; border: 1px solid var(--line-strong); border-radius: var(--radius); padding: 24px; background: var(--ink-2); transition: border-color 0.18s ease, transform 0.18s ease; }
 .post-card:hover { border-color: var(--chalk); transform: translateY(-2px); }
 .post-card time { font-size: 14px; color: var(--chalk-dim); }
-.post-card h3 { font-size: 24px; margin: 8px 0; }
+.post-card h2 { font-size: 24px; margin: 8px 0; max-width: none; text-transform: none; }
 .post-card p { color: var(--chalk-dim); }
 .byline { color: var(--chalk-dim); font-size: 15px; margin-top: 14px; }
 .content-page .campaign { margin: 56px calc(50% - 50vw) 0; }
