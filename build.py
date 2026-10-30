@@ -168,7 +168,7 @@ CATEGORIES = {
     "dons": ("Dons et cadeaux", "blog/dons-et-cadeaux/",
              "Transparence sur les dons reçus par l'Association Case Game et les cadeaux remis aux enfants et aux joueurs."),
     "guides": ("Guides", "blog/guides/",
-               "Nos guides pour jouer, sortir et progresser à Douala : prix, bons plans, esport au Cameroun et idées de sorties."),
+               "Les guides Case Game pour jouer, sortir et progresser à Douala : prix des consoles, bons plans, esport au Cameroun et idées de sorties pour les jeunes."),
 }
 MONTHS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août",
           "septembre", "octobre", "novembre", "décembre"]
@@ -220,7 +220,9 @@ def listing_page(articles, path, title, description, crumb, intro, current=None)
   </ul>
   <p class="feed-link"><a href="{{root}}blog/feed.xml">S'abonner au flux RSS du blog</a></p>
 </div>"""
-    meta = {"path": path, "title": title, "description": description, "crumb": crumb, "type": "listing"}
+    seo_title = ("Blog Case Game : tournois, actualités et guides à Douala" if current is None
+                 else f"{title} – Blog Case Game Douala")
+    meta = {"path": path, "title": title, "description": description, "crumb": crumb, "type": "listing", "seo_title": seo_title}
     return meta, content
 
 
@@ -294,7 +296,7 @@ def render(meta, content):
     body = "\n".join("      " + line if line else "" for line in body.split("\n"))
     page = TEMPLATE.format(
         title=html.escape(meta["title"]),
-        full_title=html.escape(meta["title"] if "Case Game" in meta["title"] or len(meta["title"]) > 50 else meta["title"] + " – Case Game"),
+        full_title=html.escape(meta.get("seo_title") or (meta["title"] if "Case Game" in meta["title"] or len(meta["title"]) > 50 else meta["title"] + " – Case Game")),
         description=html.escape(meta["description"]),
         url=url, root=root, image=image, jsonld=jsonld, crumbs_html=crumbs_html, content=body,
         mega=mega_menu(root),
