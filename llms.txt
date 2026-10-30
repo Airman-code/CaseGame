@@ -40,7 +40,7 @@ Informations à jour au 30 octobre 2026.
 
 - [Accueil](https://casegamecm.com/) : présentation, tarifs, tournois, Games Points, association, galerie, FAQ, horaires et équipe
 - [Questions fréquentes](https://casegamecm.com/#faq)
-- [Nos activités](https://casegamecm.com/activites/) : jeux vidéo, tournois, Watersoft, jeux de société, défis, Games Points, snacks, soutien scolaire, ateliers, actions solidaires
+- [Nos activités](https://casegamecm.com/activites/) : jeux vidéo, tournois, Watersoft, jeux de société, défis, soutien scolaire, ateliers, actions solidaires
 - [Tournois de jeux vidéo à Douala](https://casegamecm.com/tournois-jeux-video-douala/) : formats, prix, inscription, règlement
 - [Watersoft à Douala](https://casegamecm.com/watersoft-douala/) : jeu de tir à billes d'eau, dès 8 ans, 300 FCFA
 - [Soutien scolaire à New Bell](https://casegamecm.com/soutien-scolaire-new-bell/) : formules Standard, Intensif, Excellence
