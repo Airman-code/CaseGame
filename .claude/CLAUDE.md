@@ -27,6 +27,16 @@ Réponds toujours en français, simplement : le propriétaire n'est pas dévelop
   (titres 30–65 car., descriptions 120–160 car., un seul h1, liens internes OK).
 - Sauvegarde de version : tag git `avant-ameliorations`.
 
+## Site bilingue FR / EN (règle permanente)
+- Tout contenu ajouté ou modifié en français (page, article, prix, horaires) doit l'être aussi en anglais,
+  dans la même session, puis publié (push sur `main`). Le client ne doit pas avoir à le demander.
+- Pages et articles anglais : `pages/en/…part.html`, chemin `en/…` + clé `fr: <chemin FR>` (voir en-tête de build.py).
+  `build.py` affiche « ATTENTION : pas de version anglaise… » tant qu'une traduction manque : ne pas publier avec ce message.
+- Textes du menu, pied de page, activités, blog : dictionnaires `L10N`, `ACTIVITIES[…]["en"]`, `CATEGORIES_EN` dans build.py.
+- Accueil anglais `en/index.html` écrit à la main : y reporter tout changement fait sur `index.html` (prix, horaires, note Google…).
+- Pages légales : en français seulement (version qui fait foi), liens marqués « (FR) » côté anglais.
+- Anglais britannique, nombres « 30,000 FCFA », dates « 30 October 2026 ».
+
 ## Charte et règles de contenu
 - Charte noir et blanc uniquement (pas de jaune), logo Case Game noir sur blanc.
 - Polices auto-hébergées (Chakra Petch, Manrope), aucune ressource Google chargée sans clic.
