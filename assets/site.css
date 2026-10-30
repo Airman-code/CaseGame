@@ -821,6 +821,65 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 110px; }
 .home-posts { margin-top: 32px; }
 .feed-link { margin-top: 28px; font-size: 14px; }
 
+/* ---------- Menu Activités ---------- */
+.top-inner { position: relative; }
+.mega-trigger { display: inline-flex; align-items: center; gap: 8px; }
+.mega-trigger .caret { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 0.18s ease; }
+.menu .mega-trigger[aria-expanded="true"] { color: var(--chalk); background: var(--ink-3); }
+.mega-trigger[aria-expanded="true"] .caret { transform: translateY(2px) rotate(-135deg); }
+.mega {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: min(980px, calc(100vw - 40px));
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+  padding: 26px 28px 20px;
+  background: var(--ink-2);
+  border: 1px solid var(--line-strong);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  z-index: 70;
+}
+.mega.open { display: grid; }
+.mega-title { font-family: var(--display); font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; font-size: 13px; color: var(--chalk-dim); margin-bottom: 8px; }
+.mega ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.menu .mega a { display: flex; align-items: center; gap: 14px; padding: 8px; border-radius: 10px; color: var(--chalk); }
+.menu .mega a:hover { background: var(--ink-3); }
+.mega img, .mega .act-icon { width: 56px; height: 56px; flex: none; border-radius: 10px; object-fit: cover; }
+.mega b { display: block; font-size: 15px; }
+.mega small { display: block; color: var(--chalk-dim); font-size: 13px; font-weight: 500; }
+.menu .mega .mega-all { grid-column: 1 / -1; justify-content: center; margin-top: 8px; border: 1px solid var(--line-strong); font-weight: 700; }
+.act-icon { display: grid; place-items: center; background: var(--chalk); color: var(--ink); }
+.act-icon .i { width: 28px; height: 28px; }
+
+/* ---------- Page Activités ---------- */
+.act-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin: 20px 0 8px; }
+.act-card { border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; background: var(--ink-2); display: flex; flex-direction: column; scroll-margin-top: 90px; }
+.act-card > img, .act-card > .act-icon { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 0; height: auto; }
+.act-card > .act-icon .i { width: 64px; height: 64px; stroke-width: 1.4; }
+.act-card > div { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.act-card h3 { margin: 0; font-size: 22px; text-transform: uppercase; }
+.prose .act-card p { font-size: 16px; }
+.act-card .post-cat { color: var(--chalk-dim); }
+.act-card .more { margin-top: auto; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
+.act-card:target { border-color: var(--chalk); box-shadow: 0 0 0 2px var(--chalk); }
+
+/* ---------- Note Google ---------- */
+.rating { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; color: var(--chalk-dim); text-decoration: none; font-size: 15px; min-height: 44px; }
+.rating .stars { color: var(--chalk); letter-spacing: 2px; font-size: 18px; }
+.rating b { color: var(--chalk); }
+.rating:hover { color: var(--chalk); }
+
+/* Bouton WhatsApp : simple icône ronde sur grand écran pour ne rien masquer */
+@media (min-width: 961px) {
+  .wa { padding: 0; width: 56px; height: 56px; justify-content: center; border-radius: 50%; }
+  .wa span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .wa .i { width: 26px; height: 26px; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .hero-grid, .split, .board, .info-grid, .about, .campaign-grid, .page-hero { grid-template-columns: 1fr; }
@@ -850,6 +909,9 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 110px; }
   .menu.open { display: flex; }
   .menu a { padding: 14px; }
   .menu .btn { margin: 8px 0 0; justify-content: center; }
+  .menu { max-height: calc(100vh - 72px); overflow-y: auto; }
+  .mega { position: static; transform: none; width: auto; grid-template-columns: 1fr; padding: 4px 0 12px; border: 0; box-shadow: none; background: transparent; }
+  .mega img, .mega .act-icon { width: 44px; height: 44px; }
   section { padding: 72px 0; }
   .fact { padding: 20px 16px; }
   .fact b { font-size: 22px; }

@@ -67,8 +67,8 @@ TEMPLATE = """<!DOCTYPE html>
         <svg class="i"><use href="#i-menu"/></svg>
       </button>
       <nav class="menu" id="menu" aria-label="Navigation principale">
+        {mega}
         <a href="{root}#tarifs">Tarifs</a>
-        <a href="{root}tournois-jeux-video-douala/">Tournois</a>
         <a href="{root}association/">Association</a>
         <a href="{root}blog/">Blog</a>
         <a href="{root}#infos">Infos pratiques</a>
@@ -98,6 +98,7 @@ TEMPLATE = """<!DOCTYPE html>
       </div>
       <nav aria-label="Découvrir">
         <ul class="legal">
+          <li><a href="{root}activites/">Activités</a></li>
           <li><a href="{root}tournois-jeux-video-douala/">Tournois</a></li>
           <li><a href="{root}watersoft-douala/">Watersoft</a></li>
           <li><a href="{root}soutien-scolaire-new-bell/">Soutien scolaire</a></li>
@@ -182,6 +183,8 @@ def date_fr(iso):
 def post_card(meta, root, heading="h2"):
     name = CATEGORIES[meta["category"]][0]
     img = meta.get("image")
+    if img and (ROOT / img).with_suffix(".webp").exists():
+        img = str(Path(img).with_suffix(".webp")).replace("\\", "/")
     thumb = f'<img src="{root}{img}" alt="" loading="lazy" width="320" height="240">' if img else ""
     return (f'<li>\n  <a class="post-card{" has-thumb" if img else ""}" href="{root}{meta["path"]}">\n'
             f'    {thumb}\n    <div>\n'
@@ -294,6 +297,7 @@ def render(meta, content):
         full_title=html.escape(meta["title"] if "Case Game" in meta["title"] or len(meta["title"]) > 50 else meta["title"] + " – Case Game"),
         description=html.escape(meta["description"]),
         url=url, root=root, image=image, jsonld=jsonld, crumbs_html=crumbs_html, content=body,
+        mega=mega_menu(root),
         og_type="article" if kind == "article" else "website",
         main_class="legal-page" if kind == "legal" else "content-page",
     )
@@ -349,6 +353,117 @@ def write_sitemap(entries):
     print("écrit sitemap.xml")
 
 
+ICONS = {
+    "dice": '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.2"/><circle cx="16" cy="16" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="16" cy="8" r="1.2"/><circle cx="8" cy="16" r="1.2"/>',
+    "target": '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+    "coin": '<circle cx="12" cy="12" r="9"/><path d="M14.5 9.5a2.5 2.5 0 1 0 0 5H12v-2.5"/>',
+    "leaf": '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/>',
+    "cup": '<path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/>',
+}
+
+# Activités : une seule liste pour le menu « Activités » et la page /activites/
+ACTIVITIES = [
+    {"id": "salle", "group": "jouer", "title": "Salle de jeux vidéo", "short": "PS4, Xbox, Wii · dès 350 FCFA",
+     "text": "Plus de 10 consoles PlayStation, Xbox et Nintendo, de 30 minutes à 3 heures, seul ou entre amis. Paiement en FCFA ou en Games Points.",
+     "href": "#tarifs", "img": "Carroussel_7.webp", "alt": "Des jeunes jouent sur les consoles de la salle Case Game"},
+    {"id": "tournois", "group": "jouer", "title": "Tournois", "short": "Chaque semaine · dès 200 FCFA",
+     "text": "Un tournoi chaque semaine, une Ligue Wii gratuite et un tournoi mensuel 18+ avec 30 000 FCFA à gagner. Classement 100 % sportif.",
+     "href": "tournois-jeux-video-douala/", "img": "events_img.webp", "alt": "Des élèves consultent le tableau d'un tournoi"},
+    {"id": "watersoft", "group": "jouer", "title": "Watersoft", "short": "Tir à billes d'eau · dès 8 ans",
+     "text": "Le jeu de tir stratégique en équipe à billes d'eau, encadré par l'équipe, protections fournies. 300 FCFA la partie.",
+     "href": "watersoft-douala/", "img": "video/watersoft-poster.webp", "alt": "Le terrain de Watersoft de Case Game"},
+    {"id": "jeux-de-societe", "group": "jouer", "title": "Jeux de société", "short": "Monopoly, Scrabble, échecs · 100 FCFA",
+     "text": "Monopoly, Scrabble, échecs et jeux de cartes (Belote, Uno…) pour la stratégie, la réflexion et la convivialité. 100 FCFA la session.",
+     "href": "activites/#jeux-de-societe", "icon": "dice"},
+    {"id": "defis", "group": "jouer", "title": "Défis et mini-défis", "short": "Gagne des Games Points gratuitement",
+     "text": "4 mini-défis par jour (100 GP) et 3 grands défis par semaine (300 GP) : micro-trottoir, petit bac, cache-cache à l'aveugle, quiz… sans rien acheter.",
+     "href": "activites/#defis", "icon": "target"},
+    {"id": "games-points", "group": "jouer", "title": "Games Points", "short": "La monnaie de la salle",
+     "text": "Achète-les en packs dès 350 FCFA ou gagne-les en tournoi, en défi et en mission solidaire, puis échange-les contre du temps de jeu ou des cadeaux.",
+     "href": "#games-points", "icon": "coin"},
+    {"id": "snack", "group": "jouer", "title": "Snack et boissons", "short": "Sur place",
+     "text": "Snacks et boissons fraîches disponibles sur place pour faire une pause entre deux parties.",
+     "href": "activites/#snack", "icon": "cup"},
+    {"id": "soutien", "group": "grandir", "title": "Soutien scolaire", "short": "Du CP à la Terminale · dès 5 000 FCFA/mois",
+     "text": "Aide aux devoirs, livrets d'exercices et suivi régulier, avec des Games Points pour récompenser l'effort. Trois formules.",
+     "href": "soutien-scolaire-new-bell/", "img": "Carroussel_4.webp", "alt": "Un élève reçoit un ticket de Games Points"},
+    {"id": "ateliers", "group": "grandir", "title": "Ateliers éducatifs", "short": "Gratuits",
+     "text": "Présentations et ateliers de discussion sur l'histoire africaine, la géographie, l'environnement, l'art et la citoyenneté.",
+     "href": "association/#actions", "img": "Carroussel_11.webp", "alt": "Des jeunes lors d'une journée de l'Association Case Game"},
+    {"id": "gamer-solidaire", "group": "grandir", "title": "Gamer Solidaire et Vert", "short": "Missions pour le quartier",
+     "text": "Des missions utiles pour New Bell (aide aux habitants, nettoyage, recyclage) proposées par les jeunes et récompensées en Games Points.",
+     "href": "association/#actions", "icon": "leaf"},
+    {"id": "orphelins", "group": "grandir", "title": "Journées avec les orphelins", "short": "Orphelinat L'Arche de Mummy",
+     "text": "Des journées de jeux, d'ateliers et de partage avec les 50 enfants de l'orphelinat L'Arche de Mummy, soutenus par notre campagne de dons.",
+     "href": "association/#campagne", "img": "Carroussel_13.webp", "alt": "Des enfants partagent un repas lors d'une journée solidaire"},
+]
+GROUPS = {"jouer": "Jouer et se challenger", "grandir": "Apprendre et agir"}
+
+
+def activity_visual(a, root, size):
+    if a.get("img"):
+        return f'<img src="{root}{a["img"]}" alt="" loading="lazy" width="{size}" height="{size}">'
+    return f'<span class="act-icon" aria-hidden="true"><svg class="i" viewBox="0 0 24 24">{ICONS[a["icon"]]}</svg></span>'
+
+
+def mega_menu(root):
+    cols = []
+    for key, label in GROUPS.items():
+        items = "\n".join(
+            f'            <li><a href="{root}{a["href"]}">{activity_visual(a, root, 56)}'
+            f'<span><b>{html.escape(a["title"])}</b><small>{html.escape(a["short"])}</small></span></a></li>'
+            for a in ACTIVITIES if a["group"] == key)
+        cols.append(f'          <div>\n            <p class="mega-title">{label}</p>\n            <ul>\n{items}\n            </ul>\n          </div>')
+    return (f'<div class="has-mega">\n'
+            f'        <a class="mega-trigger" href="{root}activites/" aria-expanded="false" aria-controls="mega-activites">Activités <span class="caret" aria-hidden="true"></span></a>\n'
+            f'        <div class="mega" id="mega-activites">\n' + "\n".join(cols) +
+            f'\n          <a class="mega-all" href="{root}activites/">Voir toutes les activités →</a>\n        </div>\n      </div>')
+
+
+def activities_page():
+    blocks = []
+    for key, label in GROUPS.items():
+        cards = "\n".join(
+            f"""    <article class="act-card" id="{a["id"]}">
+      {activity_visual(a, "{root}", 400).replace('alt=""', f'alt="{html.escape(a.get("alt", ""))}"')}
+      <div>
+        <p class="post-cat">{html.escape(a["short"])}</p>
+        <h3>{html.escape(a["title"])}</h3>
+        <p>{html.escape(a["text"])}</p>
+        {"" if a["href"].startswith("activites/") else f'<a class="more" href="{{root}}{a["href"]}">En savoir plus <svg class="i"><use href="#i-arrow"/></svg></a>'}
+      </div>
+    </article>""" for a in ACTIVITIES if a["group"] == key)
+        blocks.append(f'  <h2>{label}</h2>\n  <div class="act-grid">\n{cards}\n  </div>')
+    content = """<div class="prose" style="max-width:1100px">
+  <p class="label">Activités · New Bell, Douala</p>
+  <h1 style="font-size:clamp(38px,5.6vw,72px);text-transform:uppercase">Nos activités</h1>
+  <p class="byline" style="font-size:18px">Jeux vidéo, tournois, Watersoft, jeux de société, défis, soutien scolaire et actions solidaires : tout ce qu'on fait chez Case Game, à New Bell (Douala).</p>
+""" + "\n".join(blocks) + """
+  <div class="callout">
+    <div>
+      <b>Une question sur une activité ?</b>
+      <p>Horaires, âge minimum, groupes ou anniversaires : écris-nous sur WhatsApp.</p>
+    </div>
+    <a class="btn solid" href="https://wa.me/237686844407" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg> Nous écrire</a>
+  </div>
+</div>"""
+    meta = {"path": "activites/", "title": "Nos activités à Douala – Case Game",
+            "description": "Toutes les activités de Case Game à New Bell, Douala : jeux vidéo, tournois, Watersoft, jeux de société, défis, soutien scolaire et actions solidaires.",
+            "crumb": "Activités", "image": "Carroussel_7.jpg"}
+    return meta, content
+
+
+def update_home_menu():
+    home = ROOT / "index.html"
+    s = home.read_text(encoding="utf-8")
+    a_mark, b_mark = "<!-- MENU-ACTIVITES:DEBUT -->", "<!-- MENU-ACTIVITES:FIN -->"
+    if a_mark not in s:
+        return
+    a, b = s.index(a_mark) + len(a_mark), s.index(b_mark)
+    home.write_text(s[:a] + "\n      " + mega_menu("") + "\n      " + s[b:], encoding="utf-8", newline="\n")
+    print("mis à jour index.html (menu Activités)")
+
+
 def build():
     today = date.today().isoformat()
     sources = [parse(p) for p in all_sources()]
@@ -372,8 +487,10 @@ def build():
         if any(m["category"] == key for m, _ in articles):
             pages.append(listing_page(articles, path, name, desc, name, desc, current=key))
 
+    pages.append(activities_page())
     for meta, content in pages:
         render(meta, content)
+    update_home_menu()
     write_feed(articles)
     update_home(articles)
     write_sitemap([("", today), ("en/", today)]

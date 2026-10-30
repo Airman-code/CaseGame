@@ -65,7 +65,7 @@ function setUpMenu() {
       : (EN ? "Open menu" : "Ouvrir le menu"));
   });
   menu.addEventListener("click", (e) => {
-    if (e.target.closest("a")) close();
+    if (e.target.closest("a") && !e.target.closest(".mega-trigger")) close();
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && menu.classList.contains("open")) {
@@ -136,7 +136,35 @@ async function showFundraising() {
   goal.querySelector(".progress-text").textContent = text;
 }
 
+// Menu « Activités » : panneau déroulant (le lien mène à /activites/ si le script ne tourne pas)
+function setUpMegaMenu() {
+  const trigger = document.querySelector(".mega-trigger");
+  const panel = document.getElementById("mega-activites");
+  if (!trigger || !panel) return;
+  const setOpen = (open) => {
+    panel.classList.toggle("open", open);
+    trigger.setAttribute("aria-expanded", open);
+  };
+  trigger.addEventListener("click", (e) => {
+    e.preventDefault();
+    setOpen(!panel.classList.contains("open"));
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".has-mega")) setOpen(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && panel.classList.contains("open")) {
+      setOpen(false);
+      trigger.focus();
+    }
+  });
+  panel.addEventListener("click", (e) => {
+    if (e.target.closest("a")) setOpen(false);
+  });
+}
+
 showOpeningStatus();
 setUpMenu();
+setUpMegaMenu();
 setUpMap();
 showFundraising();
