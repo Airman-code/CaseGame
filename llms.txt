@@ -17,7 +17,7 @@ Informations à jour au 30 octobre 2026.
 - PS4 / Xbox : 350 FCFA les 30 minutes (ou 100 GP), 600 FCFA l'heure (ou 200 GP)
 - Wii : 350 FCFA l'heure (ou 100 GP)
 - Watersoft (billes d'eau) : 300 FCFA la partie, dès 8 ans, encadrée par l'équipe, protections fournies
-- Jeux de société : 100 FCFA la session
+- Jeux de société : 100 FCFA l'heure (ticket), carnet de 5 tickets à 500 FCFA ; parties à 4 ou 8 joueurs ; le gagnant reçoit 30 à 60 min de jeu vidéo
 - Packs : Matinal 400 FCFA (1 h, 11 h – 13 h), After School 500 FCFA (1 h, 16 h – 18 h), Week-end 1 500 FCFA (3 h)
 - Abonnement mensuel illimité : 10 000 FCFA
 - Packs de Games Points : 100 GP = 350 FCFA, 200 GP = 600 FCFA, 300 GP = 800 FCFA
@@ -42,6 +42,7 @@ Informations à jour au 30 octobre 2026.
 - [Questions fréquentes](https://casegamecm.com/#faq)
 - [Nos activités](https://casegamecm.com/activites/) : jeux vidéo, tournois, Watersoft, jeux de société, défis, soutien scolaire, ateliers, actions solidaires
 - [Tournois de jeux vidéo à Douala](https://casegamecm.com/tournois-jeux-video-douala/) : formats, prix, inscription, règlement
+- [Jeux de société à Douala](https://casegamecm.com/jeux-de-societe-douala/) : Monopoly, Scrabble, échecs, cartes, 100 FCFA l'heure
 - [Watersoft à Douala](https://casegamecm.com/watersoft-douala/) : jeu de tir à billes d'eau, dès 8 ans, 300 FCFA
 - [Soutien scolaire à New Bell](https://casegamecm.com/soutien-scolaire-new-bell/) : formules Standard, Intensif, Excellence
 - [Association Case Game](https://casegamecm.com/association/) : mission, actions, campagne pour 50 orphelins

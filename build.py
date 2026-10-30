@@ -101,6 +101,7 @@ TEMPLATE = """<!DOCTYPE html>
           <li><a href="{root}activites/">Activités</a></li>
           <li><a href="{root}tournois-jeux-video-douala/">Tournois</a></li>
           <li><a href="{root}watersoft-douala/">Watersoft</a></li>
+          <li><a href="{root}jeux-de-societe-douala/">Jeux de société</a></li>
           <li><a href="{root}soutien-scolaire-new-bell/">Soutien scolaire</a></li>
           <li><a href="{root}association/">Association</a></li>
           <li><a href="{root}blog/">Blog</a></li>
@@ -374,9 +375,9 @@ ACTIVITIES = [
     {"id": "watersoft", "group": "jouer", "title": "Watersoft", "short": "Tir à billes d'eau · dès 8 ans",
      "text": "Le jeu de tir stratégique en équipe à billes d'eau, encadré par l'équipe, protections fournies. 300 FCFA la partie.",
      "href": "watersoft-douala/", "img": "Carroussel_2.webp", "alt": "Un joueur vise pendant une partie de Watersoft chez Case Game"},
-    {"id": "jeux-de-societe", "group": "jouer", "title": "Jeux de société", "short": "Monopoly, Scrabble, échecs · 100 FCFA",
-     "text": "Monopoly, Scrabble, échecs et jeux de cartes (Belote, Uno…) pour la stratégie, la réflexion et la convivialité. 100 FCFA la session.",
-     "href": "activites/#jeux-de-societe", "img": "images/jeux-de-societe.webp", "alt": "Une partie de Ludo entre enfants (photo Ab Pixels, Pexels)"},
+    {"id": "jeux-de-societe", "group": "jouer", "title": "Jeux de société", "short": "Monopoly, Scrabble, échecs · 100 FCFA/h",
+     "text": "Monopoly, Scrabble, échecs et jeux de cartes (Belote, Uno…) pour la stratégie, la réflexion et la convivialité. 100 FCFA l'heure, et le gagnant repart avec du temps de jeu vidéo offert.",
+     "href": "jeux-de-societe-douala/", "img": "images/jeux-de-societe.webp", "alt": "Une partie de Ludo entre enfants (photo Ab Pixels, Pexels)"},
     {"id": "defis", "group": "jouer", "title": "Défis et mini-défis", "short": "Gagne des Games Points gratuitement",
      "text": "4 mini-défis par jour (100 GP) et 3 grands défis par semaine (300 GP) : micro-trottoir, petit bac, cache-cache à l'aveugle, quiz… sans rien acheter.",
      "href": "activites/#defis", "icon": "target"},
