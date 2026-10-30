@@ -388,7 +388,7 @@ ACTIVITIES = [
      "href": "association/#actions", "img": "Carroussel_11.webp", "alt": "Des jeunes lors d'une journée de l'Association Case Game"},
     {"id": "gamer-solidaire", "group": "grandir", "title": "Gamer Solidaire et Vert", "short": "Missions pour le quartier",
      "text": "Des missions utiles pour New Bell (aide aux habitants, nettoyage, recyclage) proposées par les jeunes et récompensées en Games Points.",
-     "href": "association/#actions", "icon": "leaf"},
+     "href": "association/#actions", "img": "images/gamer-solidaire-vert.webp", "alt": "Logo du programme Gamer Solidaire et Vert"},
     {"id": "orphelins", "group": "grandir", "title": "Journées avec les orphelins", "short": "Orphelinat L'Arche de Mummy",
      "text": "Des journées de jeux, d'ateliers et de partage avec les 50 enfants de l'orphelinat L'Arche de Mummy, soutenus par notre campagne de dons.",
      "href": "association/#campagne", "img": "Carroussel_13.webp", "alt": "Des enfants partagent un repas lors d'une journée solidaire"},
