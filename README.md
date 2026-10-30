@@ -14,8 +14,8 @@ En ligne : https://casegamecm.com (hébergé sur GitHub Pages, domaine chez OVH)
 - `video/` – vidéo de présentation compressée
 - `legal/*.part.html` et `pages/**/*.part.html` – sources des pages légales, des pages thématiques
   (tournois, Watersoft, soutien scolaire, association) et du blog ; `python build.py` génère les pages HTML.
-  Pour un nouvel article : copier un fichier de `pages/blog/`, changer l'en-tête et le contenu, l'ajouter
-  à `pages/blog/index.part.html` et à `sitemap.xml`, puis lancer `python build.py`.
+  Le blog (page Blog, rubriques, flux RSS `blog/feed.xml`, « Actualités » de l'accueil et `sitemap.xml`)
+  est entièrement généré par `build.py`. Pour publier une actu : voir `modeles-blog/LISEZMOI.md`.
 - `llms.txt`, `sitemap.xml`, `robots.txt` – référencement (Google, Bing, assistants IA)
 
 ## Mettre à jour la cagnotte

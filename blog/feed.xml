@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog Case Game – gaming, esport et actualités à Douala</title>
+    <link>https://casegamecm.com/blog/</link>
+    <atom:link href="https://casegamecm.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Résultats des tournois, réussites de la semaine, bilans du mois, dons et cadeaux, guides : l'actualité de Case Game à New Bell, Douala.</description>
+    <language>fr</language>
+    <item>
+      <title>Où jouer à la PS4 ou à la Xbox à Douala, et à quel prix ?</title>
+      <link>https://casegamecm.com/blog/ou-jouer-ps4-xbox-douala-prix/</link>
+      <guid>https://casegamecm.com/blog/ou-jouer-ps4-xbox-douala-prix/</guid>
+      <category>Guides</category>
+      <pubDate>Fri, 30 Oct 2026 08:00:00 +0100</pubDate>
+      <description>Prix d&#x27;une session de PS4 ou de Xbox à Douala, packs, abonnements et Games Points : le guide pour bien choisir sa salle de jeux vidéo et jouer moins cher.</description>
+    </item>
+    <item>
+      <title>Que faire à Douala avec des enfants ou des ados ?</title>
+      <link>https://casegamecm.com/blog/que-faire-a-douala-avec-des-ados/</link>
+      <guid>https://casegamecm.com/blog/que-faire-a-douala-avec-des-ados/</guid>
+      <category>Guides</category>
+      <pubDate>Fri, 30 Oct 2026 08:00:00 +0100</pubDate>
+      <description>Idées de sorties à Douala pour enfants et ados : jeux vidéo, Watersoft, centres de loisirs, ateliers gratuits, soutien scolaire et nos conseils aux parents.</description>
+    </item>
+    <item>
+      <title>L&#x27;esport au Cameroun en 2026 : où jouer en compétition ?</title>
+      <link>https://casegamecm.com/blog/tournois-esport-cameroun-2026/</link>
+      <guid>https://casegamecm.com/blog/tournois-esport-cameroun-2026/</guid>
+      <category>Guides</category>
+      <pubDate>Fri, 30 Oct 2026 08:00:00 +0100</pubDate>
+      <description>L&#x27;esport au Cameroun en 2026 : qualification à l&#x27;Esports Nations Cup, communautés de joueurs à Douala et Yaoundé, et tournois chaque semaine chez Case Game.</description>
+    </item>
+  </channel>
+</rss>

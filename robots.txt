@@ -3,6 +3,7 @@ Allow: /
 Disallow: /legal/
 Disallow: /pages/
 Disallow: /scripts/
+Disallow: /modeles-blog/
 Disallow: /maquette/
 
 Sitemap: https://casegamecm.com/sitemap.xml
