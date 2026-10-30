@@ -12,8 +12,10 @@ En ligne : https://casegamecm.com (hébergé sur GitHub Pages, domaine chez OVH)
 - `fonts/` – polices auto-hébergées (Chakra Petch, Manrope, licence OFL)
 - `equipe/` – portraits de l'équipe
 - `video/` – vidéo de présentation compressée
-- `legal/*.part.html` – contenu des pages légales ; `python legal/_build.py` régénère
-  `mentions-legales.html`, `confidentialite.html`, `cookies.html`, `cgu.html` et `remboursement.html`
+- `legal/*.part.html` et `pages/**/*.part.html` – sources des pages légales, des pages thématiques
+  (tournois, Watersoft, soutien scolaire, association) et du blog ; `python build.py` génère les pages HTML.
+  Pour un nouvel article : copier un fichier de `pages/blog/`, changer l'en-tête et le contenu, l'ajouter
+  à `pages/blog/index.part.html` et à `sitemap.xml`, puis lancer `python build.py`.
 - `llms.txt`, `sitemap.xml`, `robots.txt` – référencement (Google, Bing, assistants IA)
 
 ## Mettre à jour la cagnotte

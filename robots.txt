@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /legal/
+Disallow: /pages/
+Disallow: /scripts/
 Disallow: /maquette/
 
 Sitemap: https://casegamecm.com/sitemap.xml

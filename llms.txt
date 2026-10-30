@@ -2,11 +2,11 @@
 
 > Case Game est une salle de jeux vidéo et d'esport située à l'Hôtel Fatime Babylone, quartier New Bell, à Douala (Cameroun). Plus de 10 consoles PlayStation, Xbox et Nintendo, tournois chaque semaine, Watersoft (tir stratégique à billes d'eau), défis quotidiens et Games Points. Case Game porte aussi l'Association Case Game, une association à but non lucratif pour les jeunes de 10 à 25 ans (soutien scolaire, ateliers gratuits, actions solidaires).
 
-Informations à jour au 29 octobre 2026.
+Informations à jour au 30 octobre 2026.
 
 ## Infos pratiques
 
-- Adresse : Hôtel Fatime Babylone, New Bell, Douala, Cameroun ([Google Maps](https://www.google.com/maps?cid=1372779821846793124))
+- Adresse : Hôtel Fatime Babylone, rue du Roi Njoya, New Bell, Douala, Cameroun ([Google Maps](https://www.google.com/maps?cid=1372779821846793124))
 - Horaires : fermé le lundi ; mardi à vendredi 12 h – 22 h ; samedi 9 h – 22 h ; dimanche 10 h – 22 h
 - Téléphone et WhatsApp : +237 6 86 84 44 07
 - E-mail : contact.casegame@gmail.com
@@ -40,6 +40,11 @@ Informations à jour au 29 octobre 2026.
 
 - [Accueil](https://casegamecm.com/) : présentation, tarifs, tournois, Games Points, association, galerie, FAQ, horaires et équipe
 - [Questions fréquentes](https://casegamecm.com/#faq)
+- [Tournois de jeux vidéo à Douala](https://casegamecm.com/tournois-jeux-video-douala/) : formats, prix, inscription, règlement
+- [Watersoft à Douala](https://casegamecm.com/watersoft-douala/) : jeu de tir à billes d'eau, dès 8 ans, 300 FCFA
+- [Soutien scolaire à New Bell](https://casegamecm.com/soutien-scolaire-new-bell/) : formules Standard, Intensif, Excellence
+- [Association Case Game](https://casegamecm.com/association/) : mission, actions, campagne pour 50 orphelins
+- [Blog](https://casegamecm.com/blog/) : guides gaming et sorties à Douala, esport au Cameroun
 - [English version](https://casegamecm.com/en/) : home page and FAQ in English
 - [CGU et règlement des tournois](https://casegamecm.com/cgu.html)
 - [Politique de remboursement](https://casegamecm.com/remboursement.html)
